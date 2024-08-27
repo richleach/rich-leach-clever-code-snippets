@@ -1,8 +1,11 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import type {Metadata} from "next";
+import {Inter} from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header";
+import LeftNav from "@/components/leftNav";
+import Footer from "@/components/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({subsets: ["latin"]});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -10,13 +13,37 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
-}: Readonly<{
+                                     children,
+                                   }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+      <html lang="en">
+      <body className={inter.className}>
+      <div className="flex flex-col min-h-screen">
+            <Header />
+          {/*Main Content*/}
+          <div className="flex flex-col md:flex-row flex-1">
+              {/*Left Column*/}
+              <aside className="w-full md:w-[30%] bg-gray-200 p-4">
+                <LeftNav/>
+              </aside>
+
+              {/*Right Column*/}
+              <main className="w-full md:w-[70%] bg-gray-100 p-4">
+                  {children}
+              </main>
+          </div>
+
+          {/*Footer*/}
+          <footer className="w-full h-[70px] bg-gray-800 text-white flex items-center justify-center ">
+            <Footer />
+          </footer>
+      </div>
+      </body>
+      </html>
   );
 }
+
+
+
