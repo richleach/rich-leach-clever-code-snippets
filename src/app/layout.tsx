@@ -25,7 +25,7 @@ export default function RootLayout({
           {/*Main Content*/}
           <div className="flex flex-col md:flex-row flex-1">
               {/*Left Column*/}
-              <aside className="w-full md:w-[30%] bg-gray-200 p-4">
+              <aside className="w-full md:w-[30%] bg-gray-200 p-4 border-r-slate-300 border-r-2">
                 <LeftNav/>
               </aside>
 
