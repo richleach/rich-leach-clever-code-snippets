@@ -10,14 +10,28 @@ const highlight = (code:string, language:string='markup') => {
     return res;
 }
 
-export default function ConditionalCssClasses() {
+export default function RandomJS() {
 
     const code = `
-const number = -2;
-
-<span className={number > 0 ? "css-positive-number" : "css-negative-number"}>
-    {number}
-</span>
+    //3 parts to understanding TS in Next.js....
+    
+    //Part 1: The parent component
+    
+    //Part 2: The child component
+    
+    //Part 2a: The "type" definition
+    
+    //Part 3: Consuming the prop in your child component
+    
+    type CardProps = {
+    title: string;
+    code: string;
+    usage: string;
+    }
+    
+    export default function MyComponent({title, code, usage}:CardProps) {
+        ...
+     }   
     `
 
     const language = "typescript";
@@ -26,11 +40,11 @@ const number = -2;
     return (
         <div className="min-h-screen m-4">
             <h2 className="w-full text-center text-xl">
-                Conditional CSS Classes Based on Condition
+                VERY BASIC: How TypeScript Works In Next.js
             </h2>
-            <p className="mt-3">Code for when you are declaring CSS classNames based on a condition.</p>
+            <p className="mt-3">Just getting started with Next.js and TypeScript? Wondering how/why to use TypeScript instead of just JSX in your files? Check it out!</p>
 
-            <pre className={`language-${language}`} style={{wordWrap: "normal"}}>
+            <pre className="language-typescript" style={{wordWrap: "normal"}}>
                 <code
                     className="language-typescript" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(highlightedCode)}}></code>
             </pre>
