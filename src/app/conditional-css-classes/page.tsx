@@ -1,44 +1,40 @@
 import React from "react";
-import PrismLoader from "@/components/prism-loader";
+//import PrismLoader from "@/components/prism-loader";
+import Prism from "prismjs";
+import "prismjs/themes/prism-coy.css";
+import "prismjs/components/prism-typescript";
+import DOMPurify from "isomorphic-dompurify";
+
+const highlight = (code:string, language:string='markup') => {
+    const res = Prism.highlight(code, Prism.languages[language], language);
+    return res;
+}
 
 export default function ConditionalCssClasses() {
 
     const code = `
-    const number = -2;
+const number = -2;
 
-    <span className={number > 0 ? "css-positive-number" : "css-negative-number"}>
-        {number}
-    </span>
-       
+<span className={number > 0 ? "css-positive-number" : "css-negative-number"}>
+    {number}
+</span>
     `
-    return (
-        <div className="flex min-h-screen flex-col items-start m-4">
-            <h2 className="w-full text-center text-xl">
-                Conditional CSS Classes Based on Condition</h2>
-            <p className="mt-3">Code for when you are declaring CSS classNames based on a condition and have other class names defined in the element.</p>
 
-            <pre className="language-ts line-numbers">
-                <code className="language-ts line-numbers">
-                    {code}
-                </code>
+    const language = "typescript";
+    const highlightedCode = highlight(code, language);
+
+    return (
+        <div className="min-h-screen m-4">
+            <h2 className="w-full text-center text-xl">
+                Conditional CSS Classes Based on Condition
+            </h2>
+            <p className="mt-3">Code for when you are declaring CSS classNames based on a condition.</p>
+
+            <pre className={`language-${language}`} style={{wordWrap: "normal"}}>
+                <code
+                    className="language-typescript" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(highlightedCode)}}></code>
             </pre>
 
-        <PrismLoader />
         </div>
     )
 }
-/*
-
-make
-a
-snippet
-for this bg - color
-shortcut:
-    <main className="bg-[#5DC9A8]">
-        //stuff
-    </main>
-*/
-
-/*
-<span className=\
-    {\` formatClassOne ${'conditionTrue' ? 'cssClassNameForTrue' : 'cssClassNameForFalse'}\`\}>*/
