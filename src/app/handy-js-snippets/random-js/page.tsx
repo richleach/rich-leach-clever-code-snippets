@@ -28,7 +28,7 @@ export default function RandomJS() {
 
             <pre className="language-typescript" style={{wordWrap: "normal"}}>
                 <code
-                    className="language-typescript" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(highlightedCode)}}></code>
+                    className="language-typescript" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(highlightedCode)}} style={{borderLeft: "10px solid #3d4800"}}></code>
             </pre>
 
         </div>

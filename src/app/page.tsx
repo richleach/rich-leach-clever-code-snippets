@@ -12,14 +12,21 @@ export default function Home() {
           </div>
 
           <div className="mt-3">
-              Instead of rewriting all of my code from scratch on my next project I finally put my often-used-code in an easy-to-find place. I tried organizing everything by category on the left column being as descriptive as possible. Oh, and you may see the same snippet(s) appear under different categories where applicable.
+              Every time I started a new project I asked myself, "where is that code?"<br/>
+              "Which file?"<br/>
+              "Which IDE?"<br/>
+              "Which computer???"
           </div>
           <div className="mt-3">
-              These days I&apos;m writing a lot of Next.js/TypeScript code, along with a ton of TailwindCSS so naturally that&apos;s the kind of code you&apos;ll likely find here. In time I&apos;ll get to growing this repository out and implementing more friendly and usable features like Search and My Account. For now feel free to peruse, then copy and paste to your heart&apos;s content.
+              So I&apos;m putting it all right here.
           </div>
 
           <div className="mt-3">
-              Make sure you read the <Link href="/pre-reqs"> Pre-reqs </Link>page first, so that we&amp;re on the same page right from the get-go.
+              These days I&apos;m writing a lot of Next.js/TypeScript code, along with a ton of TailwindCSS so naturally that&apos;s the kind of code you&apos;ll find here. In time I&apos;ll get to growing this repository out and implementing more friendly and usable features like Search and My Account. For now feel free to copy and paste to your heart&apos;s content.
+          </div>
+
+          <div className="mt-3">
+              Make sure you read the <Link href="/pre-reqs"> Pre-reqs </Link>page first, so that we&apos;re on the same page before you tell me my code is broken.
           </div>
       </div>
   );

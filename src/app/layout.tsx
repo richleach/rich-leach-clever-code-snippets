@@ -4,6 +4,9 @@ import "./globals.css";
 import Header from "@/components/header";
 import LeftNav from "@/components/leftNav";
 import Footer from "@/components/footer";
+import '@mantine/core/styles.css';
+
+import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -19,28 +22,30 @@ export default function RootLayout({
 }>) {
   return (
       <html lang="en">
-      <body className={inter.className}>
-      <div className="flex flex-col min-h-screen">
-            <Header />
-          {/*Main Content*/}
-          <div className="flex flex-col md:flex-row flex-1">
-              {/*Left Column*/}
-              <aside className="w-full md:w-1/3 bg-gray-200 p-4 border-r-slate-300 border-r-2">
-                <LeftNav/>
-              </aside>
+          <body className={`"flex flex-col min-h-screen" + ${inter.className}`}>
+              <div>
+                    <Header />
+                  {/*Main Content*/}
+                  <div className="flex flex-col md:flex-row flex-1">
+                      {/*Left Column*/}
+                      <aside className="w-full md:w-1/3 bg-gray-200 p-4 border-r-slate-300 border-r-2">
+                        <LeftNav/>
+                      </aside>
 
-              {/*Right Column*/}
-              <main className="w-full md:w-2/3 bg-gray-100 p-4">
-                  {children}
-              </main>
-          </div>
+                      {/*Right Column*/}
+                      <main className="w-full md:w-2/3 bg-gray-100 p-4">
+                          <MantineProvider>
+                            {children}
+                          </MantineProvider>
+                      </main>
+                  </div>
 
-          {/*Footer*/}
-          <footer className="w-full h-[70px] bg-gray-800 text-white flex items-center justify-center ">
-            <Footer />
-          </footer>
-      </div>
-      </body>
+                  {/*Footer*/}
+                  <footer className="left:0 w-full h-[70px] bg-gray-800 text-white flex items-center justify-center ">
+                    <Footer />
+                  </footer>
+              </div>
+          </body>
       </html>
   );
 }

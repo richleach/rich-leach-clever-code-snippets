@@ -14,12 +14,12 @@ export default function Header() {
 
 
                 <div className="w-1/2 text-center text-3xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-                    (mostly...) Clever Code Snippets
+                    <strong>(mostly...) Clever Code Snippets</strong>
                 </div>
 
 
-                <div className="w-1/4 text-right mr-3">
-                    <p>&nbsp;</p>
+                <div className="w-1/4 text-xl text-right mr-4 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+                    <p><Link href="/contact">Contact</Link></p>
                 </div>
 
             </header>

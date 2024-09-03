@@ -9,7 +9,7 @@ export default function LeftNav() {
 
                 <p style={{paddingTop: "4px"}}><Link href="/tailwindcss">Tailwind CSS</Link></p>
 
-                <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link href="conditional-css-classes">Conditional CSS Classes</Link></li>
+                <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link href="/tailwindcss/conditional-css-classes">Conditional CSS Classes</Link></li>
 
                 <p style={{paddingTop: "4px"}}><Link href="/jsx-snippets">Handy JSX Snippets</Link></p>
 
