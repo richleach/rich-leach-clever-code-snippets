@@ -56,7 +56,7 @@ export default function prereqs() {
             </div>
             <br/>
             Just in case you run into an issue with the code on this site not working as expected you can double-check
-            your versions against mine:<br/><br/>
+            your NPM package versions in your package.json against mine:<br/><br/>
 
             <Card shadow="sm" padding="xl" radius="md" withBorder>
                 <Card.Section style={{marginLeft: "4px", marginRight: "4px", marginTop: "4px"}}>
