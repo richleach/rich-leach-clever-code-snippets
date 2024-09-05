@@ -26,7 +26,7 @@ export default function Home() {
           </div>
 
           <div className="mt-3">
-              Make sure you read the <Link href="/pre-reqs"> Pre-reqs </Link>page first, so that we&apos;re on the same page before you tell me my code is broken.
+              Make sure you read the <Link href="/pre-reqs"> Pre-reqs </Link>page first, so that we&apos;re on the same page before you tell me my code doesn&apos;t work in your project.
           </div>
       </div>
   );

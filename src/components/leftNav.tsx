@@ -5,27 +5,44 @@ export default function LeftNav() {
     return (
         <menu>
             <ul>
-                <p><Link href="pre-reqs"> Pre-reqs</Link></p>
+                <p><Link href="/pre-reqs"> Pre-Reqs</Link></p>
 
-                <p style={{paddingTop: "4px"}}><Link href="/tailwindcss">Tailwind CSS</Link></p>
+                {/*<p style={{paddingTop: "4px"}}><Link href="/tailwindcss">Tailwind CSS</Link></p>*/}
+                <p style={{paddingTop: "4px"}}>Tailwind CSS</p>
 
-                <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link href="/tailwindcss/conditional-css-classes">Conditional CSS Classes</Link></li>
+                <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
+                    href="/tailwindcss/conditional-css-classes">Conditional CSS Classes</Link></li>
+                <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
+                    href="/tailwindcss/vertically-and-horizontally-centered">Vertically And Horizontally Centered
+                    CSS</Link></li>
 
-                <p style={{paddingTop: "4px"}}><Link href="/jsx-snippets">Handy JSX Snippets</Link></p>
+                {/*<p style={{paddingTop: "4px"}}><Link href="/jsx-snippets">Handy JSX Snippets</Link></p>*/}
+                <p style={{paddingTop: "4px"}}>Handy JSX Snippets</p>
 
-                <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link href="/handy-js-snippets/random-js/">Random Number Generator</Link></li>
+                <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
+                    href="/handy-js-snippets/random-js/">Random Number Generator</Link></li>
 
-                <p style={{paddingTop: "4px"}}><Link href="/nextjs">Next.js</Link></p>
+                <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
+                    href="/handy-js-snippets/dynamic-year-generator/">Dynamic Year Generator</Link></li>
 
-                <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; Item 3</li>
+                {/*<p style={{paddingTop: "4px"}}><Link href="/nextjs">Next.js</Link></p>*/}
+                <p style={{paddingTop: "4px"}}>Next.js</p>
 
-                <p style={{paddingTop: "4px"}}><Link href="/strictly-react">Strictly React</Link></p>
+                <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
+                    href="/nextjs/streaming-parts-of-a-page-suspense-part-1/">Streaming Parts of a Web Page (Suspense) Part 1</Link></li>
 
-                <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; Item 4</li>
+                {/*<p style={{paddingTop: "4px"}}><Link href="/strictly-react">Strictly React</Link></p>*/}
+                <p style={{paddingTop: "4px"}}>Strictly React</p>
 
-                <p style={{paddingTop: "4px"}}><Link href="/typescript">TypeScript</Link></p>
+                <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
+                    href="/strictly-react/if-else-alternatives/">If-Else Alternatives</Link></li>
 
-                <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link href="/typescript/how-typescript-works-in-nextjs">BASICS: How TypeScript Works in Next.js</Link></li>
+                {/*<p style={{paddingTop: "4px"}}><Link href="/typescript">TypeScript</Link></p>*/}
+                <p style={{paddingTop: "4px"}}>TypeScript</p>
+
+                <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
+                    href="/typescript/how-typescript-works-in-nextjs">BASICS: How TypeScript Works in Next.js</Link>
+                </li>
             </ul>
         </menu>
     );

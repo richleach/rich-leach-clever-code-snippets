@@ -81,8 +81,11 @@ export default function ProductButton({actions, children, onClick}:ProductButton
             <h2 className="w-full text-center text-xl">
                 VERY BASIC: How TypeScript Works In Next.js
             </h2>
-            <p className="mt-3">If you&apos;re writing and building React/Next.js applications you&apos;ll need to use TypeScript. Period. Don&apos;t fight learning TypeScript, just steer into it.<br /> Long story short: The props you pass to a child component need to be defined (or &quot;typed&quot;) so that it knows what to expect when it runs. Check out the example below:</p>
-
+            <p className="mt-3">If you&apos;re writing and building React/Next.js applications you&apos;ll need to use
+                TypeScript. Period. Don&apos;t fight learning TypeScript, just steer into it.<br/> Long story short: The
+                props you pass to a child component need to be defined (or &quot;typed&quot;) so that it knows what to
+                expect when it runs. Check out the example below:</p>
+            <br/>
             <pre className="language-typescript" style={{wordWrap: "normal"}}>
                 <code
                     className="language-typescript"
@@ -105,7 +108,7 @@ export default function ProductButton({actions, children, onClick}:ProductButton
                     <strong>Dashboard component:</strong><br/>
                     Do you see where we invoke the <strong>ProductButton</strong> component (&lt;ProductButton
                     actions=&quot;add&quot;/&gt;)?
-                    That&apos;s all you should be paying attention to at the moment. See the &quot;actionType&quot; prop
+                    That&apos;s all you should be paying attention to at the moment. See the &quot;actions&quot; prop
                     on the ProductButton? That&apos;s our target - in this case it&apos;s set
                     to &quot;add&quot;....<br/><br/>
                     <strong>ProductButton component:</strong><br/>The &quot;<strong>type
@@ -129,23 +132,25 @@ export default function ProductButton({actions, children, onClick}:ProductButton
                     the ProductButton component, change <br/><br/><strong>&lt;ProductButton
                     actions=&quot;add&quot;/&gt;</strong><br/> to <br/><strong>&lt;ProductButton
                     actions=&quot;refund&quot;/&gt;</strong><br/><br/>You should immediately notice your IDE (VSCode,
-                    Webstorm, etc) complains with an error. Why? Because in ProductButton: <br/><br/>
+                    Webstorm, etc) complains with an error. Why? Because in the ProductButton component: <br/><br/>
                     <strong>type ProductButtonProps = &#123;<br/>
-                        actions: "add" | "edit" | "checkout";<br/>
+                        actions: &quot;add&quot; | &quot;edit&quot; | &quot;checkout&quot;;<br/>
                         children?: React.ReactNode;<br/>
                         onClick?: () =&gt; void;<br/>
-                        }</strong><br/><br/>
+                        &#125;</strong><br/><br/>
                     ...you told your ProductButton component that it
                     should only expect the values &quot;add&quot; OR &quot;edit&quot; OR &quot;checkout&quot;, and
                     that&quot;s TypeScript in action! It checks your &quot;types&quot; for you and tells you when
-                    there&apos;s an issue. How do you make that error go away? Do one of two things: either
+                    there&apos;s an issue. <br/><br/>To complete our task of adding &quot;refund&quot; functionality
+                    simply
                     add &quot;refund&quot; to the ProductButton component prop type definition
                     at the top of
-                    ProductButton <br/><strong>action: &quot;add&quot; | &quot;edit&quot; | &quot;checkout&quot;</strong><br/>to<br/>
-                    <strong>actionType: &quot;add&quot; | &quot;edit&quot; | &quot;checkout&quot; | &quot;refund&quot;</strong><br/>OR<br/>
-                    just remove the &quot;refund&quot; from the actions prop in Dashboard.tsx.<br/><br/>
-                    TypeScript will actually look at both files, back and forth and analyze what your component is
-                    actually passing and receiving for props.<br/><br/> TypeScript will just keep you honest ;-)
+                    ProductButton. <br/><br/> Change <br/><strong>action: &quot;add&quot; | &quot;edit&quot; | &quot;checkout&quot;</strong><br/>to<br/>
+                    <strong>actionType: &quot;add&quot; | &quot;edit&quot; | &quot;checkout&quot; | &quot;refund&quot;</strong><br/><br/>
+                    TypeScript will look at both files, reading back and forth and analyze what your component is
+                    actually passing and receiving for props.<br/><br/> TypeScript will keep your code honest during
+                    development as well as at build time (ignoring a TypeScript error that you made during coding will
+                    throw that same error during the build process so you better fix it!)
                 </Card.Section>
             </Card>
 

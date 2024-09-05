@@ -13,26 +13,27 @@ const highlight = (code:string, language:string='markup') => {
     return res;
 }
 
-export default function ConditionalCssClasses() {
+export default function DynamicYearGenerator() {
 
     const code = `
-//condition: is the number gt 0
-const number = -2;
+<div>
+    <div className="opacity-50">
+        &copy; {new Date().getFullYear()} Rich Leach. All Rights Reserved.
+    </div>
+</div>
 
-<span className={number > 0 ? "css-positive-number" : "css-negative-number"}>
-    {number}
-</span>
-    `
-
+`
     const language = "typescript";
     const highlightedCode = highlight(code, language);
 
     return (
         <div className="min-h-screen m-4">
             <h2 className="w-full text-center text-xl">
-                Conditional CSS Classes Based on Condition
+                Simple But Effective Dynamic Copyright Notice
             </h2>
-            <p className="mt-3">Code for when you are declaring CSS classNames based on a condition.</p>
+            <p className="mt-3">I almost always use this code snippet (or something like it) when I build a new site.
+                This is great for displaying a dynamic copyright notice where you need to display the current
+                year&apos;s value (usually in the footer).</p>
             <br/>
             <pre className="language-typescript" style={{wordWrap: "normal"}}>
                 <code
@@ -44,12 +45,11 @@ const number = -2;
             <br/>
             <Card shadow="sm" padding="xl" radius="md" withBorder>
                 <Card.Section style={{marginLeft: "2px", marginRight: "2px", marginTop: "1px", marginBottom: "4px"}}>
-                    <strong>Summary</strong>: Using the ES6 ternary operator, read the className attribute like
-                    this: <br/>
-                    "If number is greater than 0 then use "css-positive-number" classes, else use "css-negative-number"
-                    classes."
+                    <strong>Summary</strong>: This code creates a new date object and displays only the year of the
+                    current date.
                 </Card.Section>
             </Card>
+
         </div>
     )
 }

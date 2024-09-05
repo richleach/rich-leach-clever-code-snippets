@@ -13,7 +13,7 @@ const highlight = (code:string, language:string='markup') => {
 export default function RandomJS() {
 
     const code = `
-    const randomNumber = Math.floor(Math.random() * 10) +1;
+const randomNumber = Math.floor(Math.random() * 10) +1;
     `
 
     const language = "typescript";
@@ -24,11 +24,14 @@ export default function RandomJS() {
             <h2 className="w-full text-center text-xl">
                 Random JS - I Always Use This In My Footers
             </h2>
-            <p className="mt-3">JavaScipt that generates a random number between 1 and 10. Change "10" to whatever range you need.</p>
-
+            <p className="mt-3">JavaScipt that generates a random number between 1 and 10. Change "10" to whatever range
+                you need.</p>
+            <br/>
             <pre className="language-typescript" style={{wordWrap: "normal"}}>
                 <code
-                    className="language-typescript" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(highlightedCode)}} style={{borderLeft: "10px solid #3d4800"}}></code>
+                    className="language-typescript"
+                    dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(highlightedCode)}}
+                    style={{borderLeft: "10px solid #3d4800"}}></code>
             </pre>
 
         </div>

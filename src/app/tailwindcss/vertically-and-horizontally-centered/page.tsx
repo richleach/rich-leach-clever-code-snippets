@@ -13,26 +13,27 @@ const highlight = (code:string, language:string='markup') => {
     return res;
 }
 
-export default function ConditionalCssClasses() {
+export default function VerticallyAndHorizontallyCentered() {
 
     const code = `
-//condition: is the number gt 0
-const number = -2;
+<div className="flex items-center justify-center min-h-screen">
+  <div className="text-center">
+    <h1 className="text-4xl font-bold">Centered Content</h1>
+    <p className="mt-4 text-lg text-gray-600">This content is centered both vertically and horizontally!</p>
+  </div>
+</div>
 
-<span className={number > 0 ? "css-positive-number" : "css-negative-number"}>
-    {number}
-</span>
-    `
-
+`
     const language = "typescript";
     const highlightedCode = highlight(code, language);
 
     return (
         <div className="min-h-screen m-4">
             <h2 className="w-full text-center text-xl">
-                Conditional CSS Classes Based on Condition
+                Vertically AND Horizontally Centered Using TailwindCSS
             </h2>
-            <p className="mt-3">Code for when you are declaring CSS classNames based on a condition.</p>
+            <p className="mt-3">...ok, allright, I know - I should just have this one memorized. But why memorize when
+                you can look it up?</p>
             <br/>
             <pre className="language-typescript" style={{wordWrap: "normal"}}>
                 <code
@@ -44,12 +45,11 @@ const number = -2;
             <br/>
             <Card shadow="sm" padding="xl" radius="md" withBorder>
                 <Card.Section style={{marginLeft: "2px", marginRight: "2px", marginTop: "1px", marginBottom: "4px"}}>
-                    <strong>Summary</strong>: Using the ES6 ternary operator, read the className attribute like
-                    this: <br/>
-                    "If number is greater than 0 then use "css-positive-number" classes, else use "css-negative-number"
-                    classes."
+                    <strong>Summary</strong>: TailwindCSS goodness that centers vertically and horizontally via flex and
+                    text-center.
                 </Card.Section>
             </Card>
+
         </div>
     )
 }
