@@ -46,8 +46,8 @@ const number = -2;
                 <Card.Section style={{marginLeft: "2px", marginRight: "2px", marginTop: "1px", marginBottom: "4px"}}>
                     <strong>Summary</strong>: Using the ES6 ternary operator, read the className attribute like
                     this: <br/>
-                    "If number is greater than 0 then use "css-positive-number" classes, else use "css-negative-number"
-                    classes."
+                    &quot;If number is greater than 0 then use &quot;css-positive-number&quot; classes, else use &quot;css-negative-number&quot;
+                    classes.&quot;
                 </Card.Section>
             </Card>
         </div>

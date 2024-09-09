@@ -12,10 +12,10 @@ export default function Home() {
           </div>
 
           <div className="mt-3">
-              Every time I started a new project I asked myself, "where is that code?"<br/>
-              "Which file?"<br/>
-              "Which IDE?"<br/>
-              "Which computer???"
+              Every time I started a new project I asked myself, &quot;where is that code?&quot;<br/>
+              &quot;Which file?&quot;<br/>
+              &quot;Which IDE?&quot;<br/>
+              &quot;Which computer???&quot;
           </div>
           <div className="mt-3">
               So I&apos;m putting it all right here.

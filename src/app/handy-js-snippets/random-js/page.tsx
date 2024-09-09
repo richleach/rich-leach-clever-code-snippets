@@ -24,7 +24,7 @@ const randomNumber = Math.floor(Math.random() * 10) +1;
             <h2 className="w-full text-center text-xl">
                 Random JS - I Always Use This In My Footers
             </h2>
-            <p className="mt-3">JavaScipt that generates a random number between 1 and 10. Change "10" to whatever range
+            <p className="mt-3">JavaScript that generates a random number between 1 and 10. Change &quot;10&quot; to whatever range
                 you need.</p>
             <br/>
             <pre className="language-typescript" style={{wordWrap: "normal"}}>
