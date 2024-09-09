@@ -38,13 +38,13 @@ export default function Contact() {
                 <form onSubmit={sendEmail}>
                     <input type="hidden" name="form-name" value="contact"/>
                     <div className="form-control">
-                        <input type="text" name="name" placeholder=" * Name" required/>
+                        <input type="text" className="p-2" name="name" placeholder=" * Name" required/>
                     </div>
                     <div className="form-control">
-                        <input type="email" name="email" placeholder=" * Email" required/>
+                        <input type="email" className="p-2" name="email" placeholder=" * Email" required/>
                     </div>
                     <div className="form-control">
-                        <textarea name="message" required placeholder=" * Enter your message here." rows="4">
+                        <textarea name="message" required placeholder=" * Enter your message here." rows={4} className="p-2">
 
                         </textarea>
                     </div>
