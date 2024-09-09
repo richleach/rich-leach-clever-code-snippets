@@ -5,7 +5,7 @@ export default function Home() {
   return (
       <div className="flex min-h-screen flex-col items-start m-4">
           <div className="w-full text-center text-xl">
-              Hi.
+              Hi!
           </div>
           <div className="w-full text-center mt-3">
               Looking for some commonly used code? Yeah, me too.
