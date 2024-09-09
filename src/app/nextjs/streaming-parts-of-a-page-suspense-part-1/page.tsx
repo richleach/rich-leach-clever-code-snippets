@@ -41,7 +41,7 @@ export default function Posts() {
             <h2 className="w-full text-center text-xl">
                 Streaming Parts of a Web Page (Suspense) Part 1
             </h2>
-            <p className="mt-3">Next.js has quickly matured into a full stack solution and one of the tools in it&apos;s arsenal is streaming content. Specifically you can plan to serve the slower-loading parts of a requested web page using a placeholder (fallback) that gets displayed while your slow (blocking) background process completes (think &quot;slow returning API request from a busy NHL server during hockey playoffs&quot; or &quot;giant database query that takes forever to return&quot;....)</p>
+            <p className="mt-3">Next.js has quickly matured into a full stack solution and one of the tools in its arsenal is streaming content. Specifically you can plan to serve the slower-loading parts of a requested web page using a placeholder (fallback) that gets displayed while your slow (blocking) background process completes (think &quot;slow returning API request from a busy NHL server during hockey playoffs&quot; or &quot;giant database query that takes forever to return&quot;....)</p>
             <br />
             <pre className="language-typescript" style={{wordWrap: "normal"}}>
                 <code

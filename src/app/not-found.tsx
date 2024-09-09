@@ -2,10 +2,10 @@ import Link from 'next/link';
 
 export default function NotFound() {
     return (
-        <div className="flex items-center justify-center min-h-screen">
+        <div className="flex justify-center min-h-screen">
             <div className="text-center">
-                <h1 className="text-4xl font-bold">Not Found!</h1>
-                <p className="mt-4 text-lg text-gray-600 text-left">Something&apos;s amiss,
+                <h1 className="text-4xl font-bold mt-20">Not Found!</h1>
+                <p className="mt-10 text-lg text-gray-600 text-left">Something&apos;s amiss,
                     awry,
                     bad,
                     busted,

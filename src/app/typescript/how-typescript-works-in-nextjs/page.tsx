@@ -43,6 +43,7 @@ export default async function Dashboard() {
         </main>
     );
 }
+
 `
     const code2 = `
 //the ProductButton component
@@ -70,6 +71,7 @@ export default function ProductButton({actions, children, onClick}:ProductButton
         return <Button variant="default" radius="lg" color="rgba(0, 0, 0, 1)" onClick={onClick}>{children}</Button>
     }
 }
+
 `
 
     const language = "typescript";
