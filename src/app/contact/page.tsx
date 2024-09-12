@@ -4,7 +4,10 @@ import { useState } from "react";
 import emailjs from 'emailjs-com';
 
 export default function Contact() {
-    const [userMessage, setUserMessage] = useState('Drop me a line.')
+    const [userMessage, setUserMessage] = useState('Drop me a line.');
+    const [name, setName] = useState('* Name');
+    const [email, setEmail] = useState('* Email');
+    const [message, setMessage] = useState('* Enter your message here');
     function sendEmail(e:any) {
         e.preventDefault();
 
@@ -38,13 +41,13 @@ export default function Contact() {
                 <form onSubmit={sendEmail}>
                     <input type="hidden" name="form-name" value="contact"/>
                     <div className="form-control">
-                        <input type="text" className="p-2" name="name" placeholder=" * Name" required/>
+                        <input type="text" className="p-2" name="name" value={name} required/>
                     </div>
                     <div className="form-control">
-                        <input type="email" className="p-2" name="email" placeholder=" * Email" required/>
+                        <input type="email" className="p-2" name="email" value={email} required/>
                     </div>
                     <div className="form-control">
-                        <textarea name="message" required placeholder=" * Enter your message here." rows={4} className="p-2">
+                        <textarea name="message"  value={message} rows={4} className="p-2" required>
 
                         </textarea>
                     </div>
