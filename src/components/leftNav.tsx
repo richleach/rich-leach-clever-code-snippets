@@ -31,6 +31,8 @@ export default function LeftNav() {
                 <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
                     href="/nextjs/streaming-parts-of-a-page-suspense-part-1/">Streaming Parts of a Web Page (Suspense)
                     Part 1</Link></li>
+                <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
+                    href="/nextjs/dynamic-routes/">Dynamic Pages in Next.js</Link></li>
                 {/*<li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
                     href="/nextjs/simple-contact-form/">Simple Next.js Contact Form</Link></li>*/}
 
