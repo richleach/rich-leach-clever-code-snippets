@@ -22,12 +22,15 @@ const highlight2 = (code2:string, language:string='markup') => {
 export default function DynamicRoutes() {
 
     const code = `
-<>
-    <h1>You entered {params.slugId} as the dynamic slug value in the URL. 
-    Try entering a different number in the URL!</h1><br />
-    
-    <Link href="/nextjs/dynamic-routes/">&lt;= Back to dynamic pages</Link>
-</>
+//this is the page.tsx file inside the [slugId] directory
+export default function ProductDetailsSample( { params }: {params: {slugId:string}} ) {
+    return (
+        <>
+            <h1>You entered "{params.slugId}" as the dynamic slug value in the URL. 
+            Try entering a different number in the URL!</h1>
+        </>
+    )
+}
 
 `
     const code2 = `
@@ -84,18 +87,27 @@ page.tsx
                     name...<br/>
                     <strong>/nextjs/dynamic-routes/</strong> are likely directory
                     names and...<br/><strong>2024</strong> is the ID of the product they want to display.
-                    There&apos;s a good chance the web site will take that <strong>2024</strong> value and run a
+                    There&apos;s a good chance the web site has only one page that will take that
+                    URL <strong>2024</strong> value and run a
                     database query against it / check some kind of a product list / etc. - they&apos;ll do something
-                    with that value to return the page you requested.
+                    with that value to return the page you requested. That&apos;s right, they can simply use only one
+                    web page to show you millions of different products.
                     <br/><br/>
 
 
                     <strong>Give it a try:</strong> <br/>
                     Enter this URL in a different tab in your browser:<br/><br/>
-                    <strong><Link href="/nextjs/dynamic-routes/2024">https://rich-leach-clever-code-snippets.vercel.app/nextjs/dynamic-routes/2024</Link></strong><br/><br/>
+                    <strong><Link
+                        href="/nextjs/dynamic-routes/2024">https://rich-leach-clever-code-snippets.vercel.app/nextjs/dynamic-routes/2024</Link></strong><br/><br/>
 
                     <strong>How Next.js Does It:</strong> <br/>
-                    The folder and file structure needs to be configured like the first code block above. You simply create a folder using the convention &quot;[folder-name]&quot; and inside that directory you create a page.tsx file (the second code block above) that reads the trailing values from the URL. Next.js refers to these values as &quot;params&quot; and you can directly reference those values by however you named the folder (in our case we named ours &quot;dynamic-routes/[slugId]&quot;). <br/> Another often-used convention is to name your dynamic folder  &quot;slug&quot;; you can name it anything you like, it&apos;s just the convention.
+                    The folder and file structure needs to be configured like the first code block above. You simply
+                    create a folder using the convention &quot;[folder-name]&quot; and inside that directory you create
+                    a page.tsx file (the second code block above) that reads the trailing values from the URL. Next.js
+                    refers to these values as &quot;params&quot; and you can directly reference those values by however
+                    you named the folder (in our case we named
+                    ours &quot;dynamic-routes/[slugId]&quot;). <br/><br/> Another often-used convention is to name your
+                    dynamic folder  &quot;slug&quot;; you can name it anything you like, it&apos;s just the convention, hence the name of this post.
 
                 </Card.Section>
             </Card>
