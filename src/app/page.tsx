@@ -3,30 +3,10 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-      <div className="flex min-h-screen flex-col items-start m-4">
-          <div className="w-full text-center text-xl">
-              Hi!
-          </div>
-          <div className="w-full text-center mt-3">
-              Looking for some commonly used code? Yeah, me too.
-          </div>
-
-          <div className="mt-3">
-              Every time I started a new project I asked myself, &quot;where is that code?&quot;<br/>
-              &quot;Which file?&quot;<br/>
-              &quot;Which IDE?&quot;<br/>
-              &quot;Which computer???&quot;
-          </div>
-          <div className="mt-3">
-              So I&apos;m putting it all right here.
-          </div>
-
-          <div className="mt-3">
-              These days I&apos;m writing a lot of Next.js/TypeScript code, along with a ton of TailwindCSS so naturally that&apos;s the kind of code you&apos;ll find here. In time I&apos;ll get to growing this repository out and implementing more friendly and usable features like Search and My Account. For now feel free to copy and paste to your heart&apos;s content.
-          </div>
-
-          <div className="mt-3">
-              Make sure you read the <Link href="/pre-reqs"> Pre-reqs </Link>page first, so that we&apos;re on the same page before you tell me my code doesn&apos;t work in your project.
+      <div className="flex justify-center min-h-screen mt-80">
+          <div className="text-center mx-auto text-xl">
+              <Image src="/images/homePageLogo.png" alt="code snippets" height={144} width={430} className="mx-auto"/><br />
+              I kept forgetting where I put that code, so I put it here.
           </div>
       </div>
   );

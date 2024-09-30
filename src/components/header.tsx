@@ -14,7 +14,7 @@ export default function Header() {
 
 
                 <div className="w-1/2 text-center text-3xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-                    <strong>(mostly...) Clever Code Snippets</strong>
+                    <strong>...copy and paste to your heart&apos;s content</strong>
                 </div>
 
 

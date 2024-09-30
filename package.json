@@ -11,6 +11,8 @@
   "dependencies": {
     "@mantine/core": "^7.12.2",
     "@mantine/hooks": "^7.12.2",
+    "@supabase/ssr": "^0.5.1",
+    "@supabase/supabase-js": "^2.45.4",
     "emailjs-com": "^3.2.0",
     "isomorphic-dompurify": "^2.15.0",
     "next": "14.2.6",
