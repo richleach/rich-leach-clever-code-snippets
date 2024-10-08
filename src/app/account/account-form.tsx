@@ -3,6 +3,8 @@ import { useCallback, useEffect, useState } from 'react'
 import { createClient } from '@/utils/supabase/client'
 import { type User } from '@supabase/supabase-js'
 
+// ...
+
 export default function AccountForm({ user }: { user: User | null }) {
     const supabase = createClient()
     const [loading, setLoading] = useState(true)
@@ -75,6 +77,9 @@ export default function AccountForm({ user }: { user: User | null }) {
 
     return (
         <div className="form-widget">
+
+            {/* ... */}
+
             <div>
                 <label htmlFor="email">Email</label>
                 <input id="email" type="text" value={user?.email} disabled />

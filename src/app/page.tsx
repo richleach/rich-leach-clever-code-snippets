@@ -1,5 +1,12 @@
 import Image from "next/image";
+import type {Metadata} from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+    title: 'rich leach clever code snippets',
+    description: 'Next.js/TailwindCSS/Typescript code snippets for your copy/paste pleasure',
+    keywords: ['Next.js code', 'Copy - paste code', 'Copy/paste Next.js', 'Copy/paste TailwindCSS', 'Copy/paste Typescript']
+}
 
 export default function Home() {
   return (
