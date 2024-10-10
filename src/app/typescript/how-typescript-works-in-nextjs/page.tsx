@@ -1,5 +1,3 @@
-'use client';
-
 import React from "react";
 //import PrismLoader from "@/components/prism-loader";
 import Prism from "prismjs";
@@ -7,6 +5,14 @@ import "prismjs/themes/prism-coy.css";
 import "prismjs/components/prism-typescript";
 import DOMPurify from "isomorphic-dompurify";
 import {Card} from "@mantine/core";
+import type {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: 'A very basic understanding of how Typescript works in Next.js',
+    description: '... an overly simplified chit-chat of how Next.js uses Typescript. A good place to start if you are just getting started.... ',
+    keywords: ['typescript', 'typescript next.js', 'props','typing Next.js','component types Next.js']
+}
+
 
 const highlight = (code:string, language:string='markup') => {
     const res = Prism.highlight(code, Prism.languages[language], language);
@@ -103,58 +109,65 @@ export default function ProductButton({actions, children, onClick}:ProductButton
             </pre>
 
             <br/>
-            <Card shadow="sm" padding="xl" radius="md" withBorder>
-                <Card.Section style={{marginLeft: "2px", marginRight: "2px", marginTop: "1px", marginBottom: "4px"}}>
-                    <strong>Summary</strong>: Don&apos;t get overwhelmed with all of that code.... FOCUS
-                    GRASSHOPPER!<br/><br/>
-                    <strong>Dashboard component:</strong><br/>
-                    Do you see where we invoke the <strong>ProductButton</strong> component (&lt;ProductButton
-                    actions=&quot;add&quot;/&gt;)?
-                    That&apos;s all you should be paying attention to at the moment. See the &quot;actions&quot; prop
-                    on the ProductButton? That&apos;s our target - in this case it&apos;s set
-                    to &quot;add&quot;....<br/><br/>
-                    <strong>ProductButton component:</strong><br/>The &quot;<strong>type
-                    ProductButtonProps = &#123;....</strong>&quot; structure at the top of the file defines what our
-                    passed in
-                    props should &quot;look like&quot;, or specifically, what type of data those individual attributes
-                    should
-                    represent (are they numbers? strings? dates? french fries.... just kidding - but not really - in a
-                    future post I&apos;ll describe how you can customize these prop thingies even more).
-                    <br/><br/>
-                    <strong>Making TypeScript make sense:</strong><br/>
-                    If you&apos;ve been struggling with how to use TypeScript in your Next.js project, right here is
-                    where you&apos;ll finally understand how to make it work for you. Copy and paste the two components
-                    from this page into your local Next.js project (make sure to name them Dashboard.tsx and
-                    ProductButton.tsx and locate them inside of your project). Do what you have to just to get the
-                    components to run and display without any errors.<br/><br/> Suppose you were extending the
-                    functionality
-                    of
-                    what your ProductButton component does (in this case adding refunds). Now, in the Dashboard
-                    component where we invoke
-                    the ProductButton component, change <br/><br/><strong>&lt;ProductButton
-                    actions=&quot;add&quot;/&gt;</strong><br/> to <br/><strong>&lt;ProductButton
-                    actions=&quot;refund&quot;/&gt;</strong><br/><br/>You should immediately notice your IDE (VSCode,
-                    Webstorm, etc) complains with an error. Why? Because in the ProductButton component: <br/><br/>
-                    <strong>type ProductButtonProps = &#123;<br/>
-                        actions: &quot;add&quot; | &quot;edit&quot; | &quot;checkout&quot;;<br/>
-                        children?: React.ReactNode;<br/>
-                        onClick?: () =&gt; void;<br/>
-                        &#125;</strong><br/><br/>
-                    ...you told your ProductButton component that it
-                    should only expect the values &quot;add&quot; OR &quot;edit&quot; OR &quot;checkout&quot;, and
-                    that&quot;s TypeScript in action! It checks your &quot;types&quot; for you and tells you when
-                    there&apos;s an issue. <br/><br/>To complete our task of adding &quot;refund&quot; functionality
-                    simply
-                    add &quot;refund&quot; to the ProductButton component prop type definition
-                    at the top of
-                    ProductButton. <br/><br/> Change <br/><strong>action: &quot;add&quot; | &quot;edit&quot; | &quot;checkout&quot;</strong><br/>to<br/>
-                    <strong>actionType: &quot;add&quot; | &quot;edit&quot; | &quot;checkout&quot; | &quot;refund&quot;</strong><br/><br/>
-                    TypeScript will look at both files, reading back and forth and analyze what your component is
-                    actually passing and receiving for props.<br/><br/> TypeScript will keep your code honest during
-                    development as well as at build time (ignoring a TypeScript error that you made during coding will
-                    throw that same error during the build process so you better fix it!)
-                </Card.Section>
-            </Card>
+            <div className="shadow-md" style={{
+                marginLeft: "2px",
+                marginRight: "2px",
+                marginTop: "1px",
+                marginBottom: "4px",
+                border: "thin solid silver",
+                padding: "10px",
+                borderRadius: "10px"
+            }}>
+
+                <strong>Summary</strong>: Don&apos;t get overwhelmed with all of that code.... FOCUS
+                GRASSHOPPER!<br/><br/>
+                <strong>Dashboard component:</strong><br/>
+                Do you see where we invoke the <strong>ProductButton</strong> component (&lt;ProductButton
+                actions=&quot;add&quot;/&gt;)?
+                That&apos;s all you should be paying attention to at the moment. See the &quot;actions&quot; prop
+                on the ProductButton? That&apos;s our target - in this case it&apos;s set
+                to &quot;add&quot;....<br/><br/>
+                <strong>ProductButton component:</strong><br/>The &quot;<strong>type
+                ProductButtonProps = &#123;....</strong>&quot; structure at the top of the file defines what our
+                passed in
+                props should &quot;look like&quot;, or specifically, what type of data those individual attributes
+                should
+                represent (are they numbers? strings? dates? french fries.... just kidding - but not really - in a
+                future post I&apos;ll describe how you can customize these prop thingies even more).
+                <br/><br/>
+                <strong>Making TypeScript make sense:</strong><br/>
+                If you&apos;ve been struggling with how to use TypeScript in your Next.js project, right here is
+                where you&apos;ll finally understand how to make it work for you. Copy and paste the two components
+                from this page into your local Next.js project (make sure to name them Dashboard.tsx and
+                ProductButton.tsx and locate them inside of your project). Do what you have to just to get the
+                components to run and display without any errors.<br/><br/> Suppose you were extending the
+                functionality
+                of
+                what your ProductButton component does (in this case adding refunds). Now, in the Dashboard
+                component where we invoke
+                the ProductButton component, change <br/><br/><strong>&lt;ProductButton
+                actions=&quot;add&quot;/&gt;</strong><br/> to <br/><strong>&lt;ProductButton
+                actions=&quot;refund&quot;/&gt;</strong><br/><br/>You should immediately notice your IDE (VSCode,
+                Webstorm, etc) complains with an error. Why? Because in the ProductButton component: <br/><br/>
+                <strong>type ProductButtonProps = &#123;<br/>
+                    actions: &quot;add&quot; | &quot;edit&quot; | &quot;checkout&quot;;<br/>
+                    children?: React.ReactNode;<br/>
+                    onClick?: () =&gt; void;<br/>
+                    &#125;</strong><br/><br/>
+                ...you told your ProductButton component that it
+                should only expect the values &quot;add&quot; OR &quot;edit&quot; OR &quot;checkout&quot;, and
+                that&quot;s TypeScript in action! It checks your &quot;types&quot; for you and tells you when
+                there&apos;s an issue. <br/><br/>To complete our task of adding &quot;refund&quot; functionality
+                simply
+                add &quot;refund&quot; to the ProductButton component prop type definition
+                at the top of
+                ProductButton. <br/><br/> Change <br/><strong>action: &quot;add&quot; | &quot;edit&quot; | &quot;checkout&quot;</strong><br/>to<br/>
+                <strong>actionType: &quot;add&quot; | &quot;edit&quot; | &quot;checkout&quot; | &quot;refund&quot;</strong><br/><br/>
+                TypeScript will look at both files, reading back and forth and analyze what your component is
+                actually passing and receiving for props.<br/><br/> TypeScript will keep your code honest during
+                development as well as at build time (ignoring a TypeScript error that you made during coding will
+                throw that same error during the build process so you better fix it!)
+            </div>
 
         </div>
     )

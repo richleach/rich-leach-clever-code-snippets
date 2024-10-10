@@ -4,6 +4,14 @@ import Prism from "prismjs";
 import "prismjs/themes/prism-coy.css";
 import "prismjs/components/prism-typescript";
 import DOMPurify from "isomorphic-dompurify";
+import type {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: 'Random Number Generator',
+    description: 'Need a random number between X and Y? Here ya go.',
+    keywords: ['Random number generator using Javascript']
+}
+
 
 const highlight = (code:string, language:string='markup') => {
     const res = Prism.highlight(code, Prism.languages[language], language);
@@ -22,7 +30,7 @@ const randomNumber = Math.floor(Math.random() * 10) +1;
     return (
         <div className="min-h-screen m-4">
             <h2 className="w-full text-center text-xl">
-                Random JS - I Always Use This In My Footers
+                Random JS - Whenever You Need Those Random Numbers
             </h2>
             <p className="mt-3">JavaScript that generates a random number between 1 and 10. Change &quot;10&quot; to whatever range
                 you need.</p>

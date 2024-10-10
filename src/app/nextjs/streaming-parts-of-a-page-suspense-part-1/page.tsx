@@ -1,5 +1,3 @@
-'use client';
-
 import React from "react";
 //import PrismLoader from "@/components/prism-loader";
 import Prism from "prismjs";
@@ -7,6 +5,13 @@ import "prismjs/themes/prism-coy.css";
 import "prismjs/components/prism-typescript";
 import DOMPurify from "isomorphic-dompurify";
 import {Card} from "@mantine/core";
+import type {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: 'Streaming parts of a Next.js page using suspense',
+    description: 'Give perceived loading and performance a boost by streaming parts of a Next.js page using Suspense. ',
+    keywords: ['Stream page', 'stream parts of a page','show content while rest of page loads Next.js']
+}
 
 const highlight = (code:string, language:string='markup') => {
     const res = Prism.highlight(code, Prism.languages[language], language);
@@ -51,11 +56,22 @@ export default function Posts() {
             </pre>
 
             <br/>
-            <Card shadow="sm" padding="xl" radius="md" withBorder>
-                <Card.Section style={{marginLeft: "2px", marginRight: "2px", marginTop: "1px", marginBottom: "4px"}}>
-                    <strong>Summary</strong>: The PostFeed and Weather components represent slow-to-return data feeds. Normally these async operations would prevent the rest of the page&apos;s content from displaying until the entire recordset is returned from the call(s) - PostFeed and Weather. The above code lets the page continue to load but instead of being blocked, the messages &quot;Loading feed....&quot; and &quot;Loading weather....&quot; are displayed in the short duration until the requested data is returned and displayed (like a placeholder).
-                </Card.Section>
-            </Card>
+            <div className="shadow-md" style={{
+                marginLeft: "2px",
+                marginRight: "2px",
+                marginTop: "1px",
+                marginBottom: "4px",
+                border: "thin solid silver",
+                padding: "10px",
+                borderRadius: "10px"
+            }}>
+                <strong>Summary</strong>: The PostFeed and Weather components represent slow-to-return data feeds.
+                Normally these async operations would prevent the rest of the page&apos;s content from displaying until
+                the entire recordset is returned from the call(s) - PostFeed and Weather. The above code lets the page
+                continue to load but instead of being blocked, the messages &quot;Loading
+                feed....&quot; and &quot;Loading weather....&quot; are displayed in the short duration until the
+                requested data is returned and displayed (like a placeholder).
+            </div>
 
         </div>
     )

@@ -1,5 +1,3 @@
-'use client';
-
 import React from "react";
 //import PrismLoader from "@/components/prism-loader";
 import Prism from "prismjs";
@@ -7,10 +5,17 @@ import "prismjs/themes/prism-coy.css";
 import "prismjs/components/prism-typescript";
 import DOMPurify from "isomorphic-dompurify";
 import {Card} from "@mantine/core";
+import type {Metadata} from "next";
 
 const highlight = (code:string, language:string='markup') => {
     const res = Prism.highlight(code, Prism.languages[language], language);
     return res;
+}
+
+export const metadata: Metadata = {
+    title: 'Conditional CSS class declaration',
+    description: 'If a condition is true, display this class, else display this class',
+    keywords: ['Conditional CSS class declaration','display CSS based on condition']
 }
 
 export default function ConditionalCssClasses() {
@@ -42,14 +47,23 @@ const number = -2;
             </pre>
 
             <br/>
-            <Card shadow="sm" padding="xl" radius="md" withBorder>
-                <Card.Section style={{marginLeft: "2px", marginRight: "2px", marginTop: "1px", marginBottom: "4px"}}>
-                    <strong>Summary</strong>: Using the ES6 ternary operator, read the className attribute like
-                    this: <br/>
-                    &quot;If number is greater than 0 then use &quot;css-positive-number&quot; classes, else use &quot;css-negative-number&quot;
-                    classes.&quot;
-                </Card.Section>
-            </Card>
+
+            <div className="shadow-md" style={{
+                marginLeft: "2px",
+                marginRight: "2px",
+                marginTop: "1px",
+                marginBottom: "4px",
+                border: "thin solid silver",
+                padding: "10px",
+                borderRadius: "10px"
+            }}>
+                <strong>Summary</strong>: Using the ES6 ternary operator, read the className attribute like
+                this: <br/>
+                &quot;If number is greater than 0 then use &quot;css-positive-number&quot; classes, else
+                use &quot;css-negative-number&quot;
+                classes.&quot;
+            </div>
+
         </div>
     )
 }
