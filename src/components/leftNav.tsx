@@ -35,6 +35,8 @@ export default function LeftNav() {
                     href="/nextjs/dynamic-routes/">Dynamic Pages in Next.js</Link></li>
                 <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
                     href="/nextjs/fetching-data-on-the-server/">Fetching Data on the Server</Link></li>
+                <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
+                    href="/nextjs/metadata-in-nextjs/">Metadata in Your Next.js Application</Link></li>
                 {/*<li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
                     href="/nextjs/simple-contact-form/">Simple Next.js Contact Form</Link></li>*/}
 

@@ -22,13 +22,16 @@ export default function IfElseAlternatives() {
 
     const code = `
 const wabbitSeason=true;
-<>
-    //logical AND operator
-    { wabbitSeason && <p>Say your pwayers wabbit....</p>}
-    
-    //ternary operator
-    { wabbitSeason ? "Run wabbit!" : "It's ok, you're safe...." }
-</>
+
+return (
+    <>
+        //logical AND operator
+        { wabbitSeason && <p>Say your pwayers wabbit....</p>}
+        
+        //ternary operator
+        { wabbitSeason ? "Run wabbit!" : "It's ok, you're safe...." }
+    </>
+)
 
 `
     const language = "typescript";

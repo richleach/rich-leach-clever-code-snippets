@@ -13,12 +13,12 @@ export default function Header() {
                 </div>
 
 
-                <div className="w-1/2 text-center text-3xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+                <div className="w-1/2 text-center text-3xl drop-shadow-[0_1.2px_1.2px_rgba(255,255,255,0.8)] text-emerald-900">
                     <strong>...copy and paste to your heart&apos;s content</strong>
                 </div>
 
 
-                <div className="w-1/4 text-2xl text-right mr-4 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+                <div className="w-1/4 text-2xl text-right mr-4 drop-shadow-[0_1.2px_1.2px_rgba(255,255,255,0.8)] text-emerald-900">
                     <p><Link href="/contact">Contact</Link></p>
                 </div>
 

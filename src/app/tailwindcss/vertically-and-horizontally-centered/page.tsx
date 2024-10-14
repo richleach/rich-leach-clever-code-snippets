@@ -50,8 +50,6 @@ export default function VerticallyAndHorizontallyCentered() {
             <br/>
 
             <div className="shadow-md" style={{marginLeft: "2px", marginRight: "2px", marginTop: "1px", marginBottom: "4px", border: "thin solid silver",  padding:"10px", borderRadius:"10px"}}>
-                <strong>Summary</strong>: The PostFeed and Weather components represent slow-to-return data feeds. Normally these async operations would prevent the rest of the page&apos;s content from displaying until the entire recordset is returned from the call(s) - PostFeed and Weather. The above code lets the page continue to load but instead of being blocked, the messages &quot;Loading feed....&quot; and &quot;Loading weather....&quot; are displayed in the short duration until the requested data is returned and displayed (like a placeholder).
-
                 <strong>Summary</strong>: TailwindCSS goodness that centers vertically and horizontally via flex and
                     text-center.
                 </div>
