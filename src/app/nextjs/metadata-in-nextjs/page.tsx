@@ -10,7 +10,7 @@ import type {Metadata} from "next";
 
 export const metadata: Metadata = {
     title: 'Making Metadata Work in Your Next.js Application  - Next.js',
-    description: 'Next.js 14 does metadata differently, here&apos;s a rundown on how to do it easily',
+    description: 'Next.js 14 does metadata differently, here is a rundown on how to do it easily',
     keywords: ['Metadata in Next.js', 'SEO in Next.js', 'Next.js code']
 }
 
