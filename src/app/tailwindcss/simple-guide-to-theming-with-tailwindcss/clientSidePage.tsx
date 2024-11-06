@@ -249,7 +249,7 @@ AND THIS:
                 <div className="grid grid-cols-12 gap-8">
                     <div className="col-start-1 col-span-6 relative aspect-video rounded-lg">
                         <Image src={Photo} alt="Image" className="rounded-md" fill objectFit="cover"/>
-                        <div className="absolute inset-0 bg-transparent hover:bg-secondary opacity-50"/>
+                        <div className="absolute inset-0 bg-transparent hover:bg-secondary opacity-50 rounded-md"/>
                     </div>
                     <div className="col-start-7  col-span-7 flex flex-col items-start items-center">
                         <h1 className="text-secondary font-bold text-4xl pb-3">
