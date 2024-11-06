@@ -251,7 +251,7 @@ AND THIS:
                         <Image src={Photo} alt="Image" className="rounded-md" fill objectFit="cover"/>
                         <div className="absolute inset-0 bg-transparent hover:bg-secondary opacity-50"/>
                     </div>
-                    <div className="col-start-7  col-span-7 flex flex-col items-start">
+                    <div className="col-start-7  col-span-7 flex flex-col items-start items-center">
                         <h1 className="text-secondary font-bold text-4xl pb-3">
                             Bulldogs-R-Us
                         </h1>
