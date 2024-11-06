@@ -275,8 +275,8 @@ AND THIS:
                     </div>
                 </div>
             </main>
-            <h2 className="text-lg w-full text-center">What&apos;s going on with the bulldog theme?</h2><br/>
-            Click the various color buttons and you&apos;ll notice the headline, buttons and image (mouseover) change to your selected color. I restricted this theme to just this dialog box; you could easily include an entire page or even your completed site. This theme demo is leveraging Next.js (React), and TailwindCSS - let&apos;s walk through the code. <br /><br />
+            <h2 className="text-lg w-full text-center">What&apos;s Going On With The Bulldog Theme?</h2><br/>
+            In my new Bulldog theme (above) just click the various color buttons and you&apos;ll notice the headline, buttons and image (mouseover) change to your selected color. I restricted this theme to just this dialog box; you could easily include an entire page or even your completed site. This theme demo is leveraging Next.js (React), and TailwindCSS - let&apos;s walk through the code. <br /><br />
             <span style={{fontWeight:"bold"}}>STEP 1:</span><br/>
             First things first: Edit your tailwind.config.ts file under theme &gt;&gt; extend &gt;&gt; colors to
             include &quot;primary&quot;,
