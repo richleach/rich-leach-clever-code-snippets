@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 
 export default function LeftNav() {
@@ -15,6 +14,8 @@ export default function LeftNav() {
                 <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
                     href="/tailwindcss/vertically-and-horizontally-centered">Vertically And Horizontally Centered
                     CSS</Link></li>
+                <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
+                    href="/tailwindcss/simple-guide-to-theming-with-tailwindcss">A Simple Guide to Theming With Tailwindcss</Link></li>
 
                 {/*<p style={{paddingTop: "4px"}}><Link href="/jsx-snippets">Handy JSX Snippets</Link></p>*/}
                 <p style={{paddingTop: "4px"}}>Handy JSX Snippets</p>

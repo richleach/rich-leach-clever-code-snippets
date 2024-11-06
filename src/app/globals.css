@@ -8,6 +8,41 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+@layer base {
+  :root {
+    --color-primary: hsl(0,0%, 0%);
+    --color-secondary: hsl(0,0%, 50%);
+    --color-text-base: hsl(0,0%, 100%);
+    --color-bg-primary: hsl(0,0%, 100%);
+  }
+}
+
+.theme-Black {
+  --color-primary: hsl(0,0%, 0%);
+  --color-secondary: hsl(0,0%, 50%);
+}
+
+.theme-Red {
+  --color-primary: hsl(25,100%, 50%);
+  --color-secondary: hsl(0,100%, 65%);
+}
+
+.theme-Purple {
+  --color-primary: hsl(270,100%, 50%);
+  --color-secondary: hsl(270,100%, 75%);
+}
+
+.theme-Green {
+  --color-primary: hsl(25,100%, 35%);
+  --color-secondary: hsl(120,100%, 45%);
+}
+
+.theme-Blue {
+  --color-primary: hsl(220,100%, 50%);
+  --color-secondary: hsl(220,100%, 75%);
+}
+
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
