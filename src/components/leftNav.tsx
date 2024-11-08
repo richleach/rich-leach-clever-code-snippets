@@ -15,7 +15,8 @@ export default function LeftNav() {
                     href="/tailwindcss/vertically-and-horizontally-centered">Vertically And Horizontally Centered
                     CSS</Link></li>
                 <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
-                    href="/tailwindcss/simple-guide-to-theming-with-tailwindcss">A Simple Guide to Theming With Tailwindcss</Link></li>
+                    href="/tailwindcss/simple-guide-to-theming-with-tailwindcss">A Simple Guide to Theming With
+                    Tailwindcss</Link></li>
 
                 {/*<p style={{paddingTop: "4px"}}><Link href="/jsx-snippets">Handy JSX Snippets</Link></p>*/}
                 <p style={{paddingTop: "4px"}}>Handy JSX Snippets</p>
@@ -38,6 +39,8 @@ export default function LeftNav() {
                     href="/nextjs/fetching-data-on-the-server/">Fetching Data on the Server</Link></li>
                 <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
                     href="/nextjs/metadata-in-nextjs/">Metadata in Your Next.js Application</Link></li>
+                <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
+                    href="/nextjs/metadata-in-nextjs-with-client-components/">Metadata in Your Next.js Client Components</Link></li>
                 {/*<li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
                     href="/nextjs/simple-contact-form/">Simple Next.js Contact Form</Link></li>*/}
 
