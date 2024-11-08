@@ -55,6 +55,7 @@ CLIENTSIDEPAGE.TSX
 
 import {useState} from 'react'
 
+// API calls to donut databases, a lot of donut logic, chomp - chomp - burp....
 const hmmmDonut = 'Glazed donut.'
 
 export default function ClientSidePage() {
