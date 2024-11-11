@@ -49,7 +49,7 @@ export default function HomersGuideToDonuts() {
 `
     const code2 = `
 CLIENTSIDEPAGE.TSX
-// this WAS named "page.tsx" before I realized I forgot to add metadata stuff and needed a server component - jeesh!
+// this WAS named "page.tsx" before I realized I forgot to add metadata stuff and needed a server component - doh!
 
 'use client'
 
@@ -82,7 +82,7 @@ export default function ClientSidePage() {
             <h2 className="w-full text-center text-xl">
                 Metadata in Your Next.js Client Components
             </h2>
-            <p className="mt-3">USE CASE: I can only use the Next.js 15 <strong>metadata</strong> object in server components, so how do I handle SEO for
+            <p className="mt-3">USE CASE: If I can only use the Next.js 15 <strong>metadata</strong> object in server components, how do I handle SEO for
                 my client component pages?</p><br />
 
             <p>
@@ -92,8 +92,7 @@ export default function ClientSidePage() {
             <br/>
 
             <p>
-                Lazy Developer&apos;s Answer: &quot; ...c&apos;mon man, lunch is in, like 2 minutes and Ed&apos;s buying - just wrap this thing up in a server component and let&apos;s go already!&quot; <br /><br />
-                Translation: Create a server side component containing only your metadata object stuff, then import your client component. Then, go to lunch.
+                Lazy Developer&apos;s Answer: Create a server side component containing only your metadata-object-stuff and import your client component. Then, go to lunch.
             </p>
             <br />
 
