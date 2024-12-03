@@ -52,6 +52,9 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -59,23 +62,30 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  .text-outline {
+    -webkit-text-stroke: .5px black; /* Outline width and color */
+    color: white; /* Makes text outline-only */
+    font-variant: small-caps;
+  }
 }
 
 a {
-  font-weight: normal;
+  font-weight: 500;
 }
 a:hover {
   color: darkslategrey;
 }
 .showcase-form {
   position: relative;
-  top: 6px;
+  top: -31px;
   height: 350px;
   width: 400px;
   padding: 40px;
@@ -104,11 +114,11 @@ font-size: 16px;
 }
 
 .btn {
+  text-align: center;
   display: inline-block;
   padding: 5px 15px;
   cursor: pointer;
   color: #000;
-  border: none;
   border-radius: 5px;
   background-color: #b4becb;
   border: 1px solid olive;

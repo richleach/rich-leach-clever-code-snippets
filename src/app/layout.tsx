@@ -22,19 +22,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <html lang="en">
+
+      // <html lang="en">suppressHydrationWarning
+        <html lang="en">
           <body className={`"flex flex-col min-h-screen" + ${inter.className}`}>
               <div>
                     <Header />
                   {/*Main Content*/}
                   <div className="flex flex-col md:flex-row flex-1">
                       {/*Left Column*/}
-                      <aside className="w-full md:w-1/3 bg-gray-200 p-4 border-r-slate-300 border-r-2">
+                      <aside className="w-full md:w-1/3  p-4 border-r-slate-300 border-r-2 bg-gradient-to-tl from-sky-50 to-blue-50" >
                         <LeftNav/>
                       </aside>
 
                       {/*Right Column*/}
-                      <main className="w-full md:w-2/3 bg-gray-100 p-4">
+                      <main className="w-full md:w-2/3 bg-gradient-to-tr from-gray-50 to-sky-50 p-4">
                           <MantineProvider>
                             {children}
                           </MantineProvider>

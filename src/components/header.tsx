@@ -13,13 +13,17 @@ export default function Header() {
                 </div>
 
 
-                <div className="w-1/2 text-center text-3xl drop-shadow-[0_1.2px_1.2px_rgba(255,255,255,0.8)] text-emerald-900">
-                    <strong>...copy and paste to your heart&apos;s content</strong>
+                {/*<div className="w-1/2 text-center text-3xl drop-shadow-[0_1.2px_1.2px_rgba(164,63,249,0.8)] text-black [text-stroke:2px_white]">*/}
+                <div
+                    className="w-1/2 flex items-center justify-center">
+                   {/* <Image src="/images/copyAndPasteAllDayLong.png" alt="Copy and paste all day long." height={68} width={607} />*/}
+
                 </div>
 
 
-                <div className="w-1/4 text-2xl text-right mr-4 drop-shadow-[0_1.2px_1.2px_rgba(255,255,255,0.8)] text-emerald-900">
-                    <p><Link href="/contact">Contact</Link></p>
+                <div
+                    className="w-1/4 text-xl text-right mr-4 text-violet-800">
+                    <p><Link href="/contact">Contact Rich</Link></p>
                 </div>
 
             </header>

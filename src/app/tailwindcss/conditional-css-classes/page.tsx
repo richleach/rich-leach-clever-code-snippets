@@ -59,9 +59,9 @@ const number = -2;
             }}>
                 <strong>Summary</strong>: Using the ES6 ternary operator, read the className attribute like
                 this: <br/>
-                &quot;If number is greater than 0 then use &quot;css-positive-number&quot; classes, else
+                &quot;If number is greater than 0 then use &quot;css-positive-number&quot; class, else
                 use &quot;css-negative-number&quot;
-                classes.&quot;
+                class.&quot;
             </div>
 
         </div>

@@ -40,7 +40,8 @@ export default function LeftNav() {
                 <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
                     href="/nextjs/metadata-in-nextjs/">Metadata in Your Next.js Application</Link></li>
                 <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
-                    href="/nextjs/metadata-in-nextjs-with-client-components/">Metadata in Your Next.js Client Components</Link></li>
+                    href="/nextjs/metadata-in-nextjs-with-client-components/">Metadata in Your Next.js Client
+                    Components</Link></li>
                 {/*<li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
                     href="/nextjs/simple-contact-form/">Simple Next.js Contact Form</Link></li>*/}
 
@@ -55,6 +56,18 @@ export default function LeftNav() {
 
                 <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
                     href="/typescript/how-typescript-works-in-nextjs">BASICS: How TypeScript Works in Next.js</Link>
+                </li>
+
+                <p style={{paddingTop: "4px"}}>Mantine Component Library</p>
+
+                <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
+                    href="/mantine/getting-started-with-forms">BASICS: Getting Started With Forms</Link>
+                </li>
+
+                <p style={{paddingTop: "4px"}}>Search Engines / Site Ranking</p>
+
+                <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
+                    href="/seo/seo-checklist">SEO Checklist</Link>
                 </li>
             </ul>
         </menu>

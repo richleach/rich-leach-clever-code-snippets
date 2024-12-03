@@ -51,7 +51,7 @@ export default function Contact() {
 
 
     return (
-        <div className="min-h-screen">
+        <div className="flex items-center justify-center min-h-screen">
             <div className="showcase-form card">
                 {userMessage && <h2 className="p-2">{userMessage}</h2>}
                 <form onSubmit={sendEmail}>
@@ -81,7 +81,11 @@ export default function Contact() {
 
                         </textarea>
                     </div>
-                    <input type="submit" value="Send" className="btn btn-primary mt-4"/>
+                    <div className="flex">
+                        <input type="submit" value="Send" className="btn btn-primary mt-4 items-center"
+                               style={{margin: "auto"}}/>
+                    </div>
+
                 </form>
             </div>
         </div>
