@@ -1,10 +1,5 @@
 import React from "react";
-//import PrismLoader from "@/components/prism-loader";
-import Prism from "prismjs";
-import "prismjs/themes/prism-coy.css";
-import "prismjs/components/prism-typescript";
-import DOMPurify from "isomorphic-dompurify";
-import {Card} from "@mantine/core";
+
 import Link from "next/link";
 import type {Metadata} from "next";
 import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
@@ -36,6 +31,7 @@ export default function HomersGuideToDonuts() {
         <ClientSidePage />
     )
 }`
+
     const code2 = `//CLIENTSIDEPAGE.TSX
 // this WAS named "page.tsx" before I realized I forgot to add metadata stuff and needed a server component - doh!
 
@@ -56,7 +52,8 @@ export default function ClientSidePage() {
             Today my favorite donut is {donutOfTheDay}
         </div>
     );
-}`
+} `
+
 
     const CodeBlock = ({ code }: { code: string }) => (
         <SyntaxHighlighter language="typescript" style={vs} showLineNumbers={true}>
