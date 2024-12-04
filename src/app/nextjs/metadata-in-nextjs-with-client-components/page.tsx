@@ -7,6 +7,8 @@ import DOMPurify from "isomorphic-dompurify";
 import {Card} from "@mantine/core";
 import Link from "next/link";
 import type {Metadata} from "next";
+import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
+import {vs} from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export const metadata: Metadata = {
     title: 'Metadata in Next.js - Client Components  - Next.js',
@@ -14,20 +16,9 @@ export const metadata: Metadata = {
     keywords: ['Metadata in Next.js - Client Components', 'SEO in Next.js', 'Next.js code', 'SEO Client Components']
 }
 
-const highlight = (code:string, language:string='markup') => {
-    const res = Prism.highlight(code, Prism.languages[language], language);
-    return res;
-}
-
-const highlight2 = (code2:string, language:string='markup') => {
-    const res = Prism.highlight(code2, Prism.languages[language], language);
-    return res;
-}
-
 export default async function Page() {
 
-    const code = `
-PAGE.TSX
+    const code = `//PAGE.TSX
 // /homers-guide-to-donuts/page.tsx
 //My newly created "shell" file. This is the server side component in my directory to be served. 
 
@@ -44,11 +35,8 @@ export default function HomersGuideToDonuts() {
     return (
         <ClientSidePage />
     )
-}
-
-`
-    const code2 = `
-CLIENTSIDEPAGE.TSX
+}`
+    const code2 = `//CLIENTSIDEPAGE.TSX
 // this WAS named "page.tsx" before I realized I forgot to add metadata stuff and needed a server component - doh!
 
 'use client'
@@ -68,15 +56,18 @@ export default function ClientSidePage() {
             Today my favorite donut is {donutOfTheDay}
         </div>
     );
-}
+}`
 
-`
-    const language = "typescript";
-    const highlightedCode = highlight(code, language);
-    const highlightedCode2 = highlight(code2, language);
-
-    let data = await fetch('https://api.vercel.app/blog')
-    let posts = await data.json()
+    const CodeBlock = ({ code }: { code: string }) => (
+        <SyntaxHighlighter language="typescript" style={vs} showLineNumbers={true}>
+            {code}
+        </SyntaxHighlighter>
+    );
+    const CodeBlock2 = ({ code2 }: { code2: string }) => (
+        <SyntaxHighlighter language="typescript" style={vs} showLineNumbers={true}>
+            {code2}
+        </SyntaxHighlighter>
+    );
     return (
         <div className="min-h-screen m-4">
             <h2 className="w-full text-center text-xl">
@@ -97,28 +88,34 @@ export default function ClientSidePage() {
             <br />
 
             <div>
-
-                <pre className="language-typescript" style={{wordWrap: "normal"}}>
-                <code
-                    className="language-typescript"
-                    dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(highlightedCode)}}
-                    style={{borderLeft: "10px solid #3d4800"}}></code>
-            </pre>
-
+                <div className="shadow-md bg-white" style={{
+                    marginLeft: "2px",
+                    marginRight: "2px",
+                    marginTop: "1px",
+                    marginBottom: "4px",
+                    border: "thin solid silver",
+                    padding: "10px",
+                    borderRadius: "10px"
+                }}>{CodeBlock({code})}
+                </div>
                 <br/>
 
-                <pre className="language-typescript" style={{wordWrap: "normal"}}>
-                <code
-                    className="language-typescript"
-                    dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(highlightedCode2)}}
-                    style={{borderLeft: "10px solid #3d4800"}}></code>
-            </pre>
+                <div className="shadow-md bg-white" style={{
+                    marginLeft: "2px",
+                    marginRight: "2px",
+                    marginTop: "1px",
+                    marginBottom: "4px",
+                    border: "thin solid silver",
+                    padding: "10px",
+                    borderRadius: "10px"
+                }}>{CodeBlock2({code2})}
+                </div>
 
                 <br/>
 
                 {/*https://www.youtube.com/watch?v=vg4g68oJNGM*/}
 
-                <div className="shadow-md" style={{
+                <div className="shadow-md bg-white" style={{
                     marginLeft: "2px",
                     marginRight: "2px",
                     marginTop: "1px",
@@ -127,7 +124,9 @@ export default function ClientSidePage() {
                     padding: "10px",
                     borderRadius: "10px"
                 }}>
-                    <strong>Summary</strong>: There are actually a number of different strategies on how to handle SEO in Next.js 15 but this will get you past the predicament of when you need to add metadata to your client component. <Link
+                    <strong>Summary</strong>: There are actually a number of different strategies on how to handle SEO
+                    in Next.js 15 but this will get you past the predicament of when you need to add metadata to your
+                    client component. <Link
                     href="https://nextjs.org/docs/app/building-your-application/optimizing/metadata"
                     target="_blank"><span style={{fontWeight: "600"}}>RTFM!</span></Link>
                 </div>

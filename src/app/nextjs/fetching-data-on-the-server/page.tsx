@@ -1,12 +1,9 @@
 import React from "react";
-//import PrismLoader from "@/components/prism-loader";
-import Prism from "prismjs";
-import "prismjs/themes/prism-coy.css";
-import "prismjs/components/prism-typescript";
-import DOMPurify from "isomorphic-dompurify";
 import {Card} from "@mantine/core";
 import Link from "next/link";
 import type {Metadata} from "next";
+import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
+import {vs} from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export const metadata: Metadata = {
     title: 'Fetching data on the server - Next.js',
@@ -14,15 +11,10 @@ export const metadata: Metadata = {
     keywords: ['Next.js code', 'Data fetching using API endpoint']
 }
 
-const highlight = (code:string, language:string='markup') => {
-    const res = Prism.highlight(code, Prism.languages[language], language);
-    return res;
-}
 
 export default async function Page() {
 
-    const code = `
-export default function Posts() {
+    const code = `export default function Posts() {
   return (
     let data = await fetch('https://api.vercel.app/blog')
     let posts = await data.json()
@@ -36,11 +28,13 @@ export default function Posts() {
             </ul>
         </>    
   )
-}
+}`
 
-`
-    const language = "typescript";
-    const highlightedCode = highlight(code, language);
+    const CodeBlock = ({ code }: { code: string }) => (
+        <SyntaxHighlighter language="typescript" style={vs} showLineNumbers={true}>
+            {code}
+        </SyntaxHighlighter>
+    );
 
     let data = await fetch('https://api.vercel.app/blog')
     let posts = await data.json()
@@ -53,12 +47,17 @@ export default function Posts() {
             <br/>
             <div className="min-h-screen m-4">
 
-                <pre className="language-typescript" style={{wordWrap: "normal"}}>
-                <code
-                    className="language-typescript"
-                    dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(highlightedCode)}}
-                    style={{borderLeft: "10px solid #3d4800"}}></code>
-            </pre>
+                <div className="shadow-md bg-white" style={{
+                    marginLeft: "2px",
+                    marginRight: "2px",
+                    marginTop: "1px",
+                    marginBottom: "4px",
+                    border: "thin solid silver",
+                    padding: "10px",
+                    borderRadius: "10px"
+                }}>
+                    {CodeBlock({code})}
+                </div>
 
                 <br/>
                 <p>This bulleted list is the result of the fetch call above. It really works!</p><br/>
@@ -70,7 +69,7 @@ export default function Posts() {
 
                 <br/>
 
-                <div className="shadow-md" style={{
+                <div className="shadow-md bg-white" style={{
                     marginLeft: "2px",
                     marginRight: "2px",
                     marginTop: "1px",

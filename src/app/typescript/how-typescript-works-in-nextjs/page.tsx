@@ -1,11 +1,7 @@
 import React from "react";
-//import PrismLoader from "@/components/prism-loader";
-import Prism from "prismjs";
-import "prismjs/themes/prism-coy.css";
-import "prismjs/components/prism-typescript";
-import DOMPurify from "isomorphic-dompurify";
-import {Card} from "@mantine/core";
 import type {Metadata} from "next";
+import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
+import {vs} from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export const metadata: Metadata = {
     title: 'A very basic understanding of how Typescript works in Next.js',
@@ -13,21 +9,9 @@ export const metadata: Metadata = {
     keywords: ['typescript', 'typescript next.js', 'props','typing Next.js','component types Next.js']
 }
 
-
-const highlight = (code:string, language:string='markup') => {
-    const res = Prism.highlight(code, Prism.languages[language], language);
-    return res;
-}
-
-const highlight2 = (code2:string, language:string='markup') => {
-    const res = Prism.highlight(code2, Prism.languages[language], language);
-    return res;
-}
-
 export default function RandomJS() {
 
-    const code = `
-//Dashboard component:
+    const code = `//Dashboard component:
 //... import all external files here, we're just focused on the ProductButton
 import ProductButton from "@/components/product-button";
 
@@ -48,11 +32,15 @@ export default async function Dashboard() {
             </div>
         </main>
     );
-}
+}`
 
-`
-    const code2 = `
-//the ProductButton component
+    const CodeBlock = ({ code }: { code: string }) => (
+        <SyntaxHighlighter language="typescript" style={vs} showLineNumbers={true}>
+            {code}
+        </SyntaxHighlighter>
+    );
+
+    const code2 = `//the ProductButton component
 //code will not wrap if too long, scroll sideways to view all code
 type ProductButtonProps = {
     actions: "add" | "edit" | "checkout";
@@ -76,13 +64,13 @@ export default function ProductButton({actions, children, onClick}:ProductButton
     if (actions === "checkout") {
         return <Button variant="default" radius="lg" color="rgba(0, 0, 0, 1)" onClick={onClick}>{children}</Button>
     }
-}
+}`
 
-`
-
-    const language = "typescript";
-    const highlightedCode = highlight(code, language);
-    const highlightedCode2 = highlight(code2, language);
+    const CodeBlock2 = ({ code2 }: { code2: string }) => (
+        <SyntaxHighlighter language="typescript" style={vs} showLineNumbers={true}>
+            {code2}
+        </SyntaxHighlighter>
+    );
 
     return (
         <div className="min-h-screen m-4">
@@ -94,22 +82,32 @@ export default function ProductButton({actions, children, onClick}:ProductButton
                 props you pass to a child component need to be defined (or &quot;typed&quot;) so that it knows what to
                 expect when it runs. Check out the example below:</p>
             <br/>
-            <pre className="language-typescript" style={{wordWrap: "normal"}}>
-                <code
-                    className="language-typescript"
-                    dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(highlightedCode)}}
-                    style={{borderLeft: "10px solid #3d4800"}}></code>
-            </pre>
+            <div className="shadow-md bg-white" style={{
+                marginLeft: "2px",
+                marginRight: "2px",
+                marginTop: "1px",
+                marginBottom: "4px",
+                border: "thin solid silver",
+                padding: "10px",
+                borderRadius: "10px"
+            }}>
+                {CodeBlock({code})}
+            </div>
 
-            <pre className="language-typescript" style={{wordWrap: "normal"}}>
-                <code
-                    className="language-typescript"
-                    dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(highlightedCode2)}}
-                    style={{borderLeft: "10px solid #3d4800"}}></code>
-            </pre>
+            <div className="shadow-md bg-white" style={{
+                marginLeft: "2px",
+                marginRight: "2px",
+                marginTop: "1px",
+                marginBottom: "4px",
+                border: "thin solid silver",
+                padding: "10px",
+                borderRadius: "10px"
+            }}>
+                {CodeBlock2({code2})}
+            </div>
 
             <br/>
-            <div className="shadow-md" style={{
+            <div className="shadow-md bg-white" style={{
                 marginLeft: "2px",
                 marginRight: "2px",
                 marginTop: "1px",

@@ -1,11 +1,7 @@
 import React from "react";
-//import PrismLoader from "@/components/prism-loader";
-import Prism from "prismjs";
-import "prismjs/themes/prism-coy.css";
-import "prismjs/components/prism-typescript";
-import DOMPurify from "isomorphic-dompurify";
-import {Card} from "@mantine/core";
 import type {Metadata} from "next";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { tomorrow, vs } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export const metadata: Metadata = {
     title: 'Streaming parts of a Next.js page using suspense',
@@ -13,15 +9,14 @@ export const metadata: Metadata = {
     keywords: ['Stream page', 'stream parts of a page','show content while rest of page loads Next.js']
 }
 
-const highlight = (code:string, language:string='markup') => {
-    const res = Prism.highlight(code, Prism.languages[language], language);
-    return res;
-}
-
+const CodeBlock = ({ code }: { code: string }) => (
+    <SyntaxHighlighter language="typescript" style={vs} showLineNumbers={true}>
+        {code}
+    </SyntaxHighlighter>
+)
 export default function StreamingPageSuspensePart1() {
 
-    const code = `
-import { Suspense } from 'react'
+    const code = `import { Suspense } from 'react'
 import { PostFeed, Weather } from './Components'
  
 export default function Posts() {
@@ -35,28 +30,32 @@ export default function Posts() {
       </Suspense>
     </section>
   )
-}
-
-`
-    const language = "typescript";
-    const highlightedCode = highlight(code, language);
+}`
 
     return (
         <div className="min-h-screen m-4">
             <h2 className="w-full text-center text-xl">
                 Streaming Parts of a Web Page (Suspense) Part 1
             </h2>
-            <p className="mt-3">Next.js has quickly matured into a full stack solution and one of the tools in its arsenal is streaming content. Specifically you can plan to serve the slower-loading parts of a requested web page using a placeholder (fallback) that gets displayed while your slow (blocking) background process completes (think &quot;slow returning API request from a busy NHL server during hockey playoffs&quot; or &quot;giant database query that takes forever to return&quot;....)</p>
-            <br />
-            <pre className="language-typescript" style={{wordWrap: "normal"}}>
-                <code
-                    className="language-typescript"
-                    dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(highlightedCode)}}
-                    style={{borderLeft: "10px solid #3d4800"}}></code>
-            </pre>
-
+            <p className="mt-3">Next.js has quickly matured into a full stack solution and one of the tools in its
+                arsenal is streaming content. Specifically you can plan to serve the slower-loading parts of a requested
+                web page using a placeholder (fallback) that gets displayed while your slow (blocking) background
+                process completes (think &quot;slow returning API request from a busy NHL server during hockey
+                playoffs&quot; or &quot;giant database query that takes forever to return&quot;....)</p>
             <br/>
-            <div className="shadow-md" style={{
+            <div className="shadow-md bg-white" style={{
+                marginLeft: "2px",
+                marginRight: "2px",
+                marginTop: "1px",
+                marginBottom: "4px",
+                border: "thin solid silver",
+                padding: "10px",
+                borderRadius: "10px"
+            }}>
+                {CodeBlock({code})}
+            </div>
+            <br/>
+            <div className="shadow-md bg-white" style={{
                 marginLeft: "2px",
                 marginRight: "2px",
                 marginTop: "1px",

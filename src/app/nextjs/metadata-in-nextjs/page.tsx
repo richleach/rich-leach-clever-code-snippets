@@ -7,6 +7,8 @@ import DOMPurify from "isomorphic-dompurify";
 import {Card} from "@mantine/core";
 import Link from "next/link";
 import type {Metadata} from "next";
+import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
+import {vs} from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export const metadata: Metadata = {
     title: 'Making Metadata Work in Your Next.js Application  - Next.js',
@@ -14,15 +16,9 @@ export const metadata: Metadata = {
     keywords: ['Metadata in Next.js', 'SEO in Next.js', 'Next.js code']
 }
 
-const highlight = (code:string, language:string='markup') => {
-    const res = Prism.highlight(code, Prism.languages[language], language);
-    return res;
-}
-
 export default async function Page() {
 
-    const code = `
-import type {Metadata} from "next";
+    const code = `import type {Metadata} from "next";
     
 export default async function Page() {
     
@@ -36,11 +32,12 @@ export default async function Page() {
         Your page content goes here.
     </>
     )
-}
-
-`
-    const language = "typescript";
-    const highlightedCode = highlight(code, language);
+}`
+    const CodeBlock = ({ code }: { code: string }) => (
+        <SyntaxHighlighter language="typescript" style={vs} showLineNumbers={true}>
+            {code}
+        </SyntaxHighlighter>
+    );
 
     let data = await fetch('https://api.vercel.app/blog')
     let posts = await data.json()
@@ -52,13 +49,17 @@ export default async function Page() {
 
             <br/>
             <div className="min-h-screen m-4">
-
-                <pre className="language-typescript" style={{wordWrap: "normal"}}>
-                <code
-                    className="language-typescript"
-                    dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(highlightedCode)}}
-                    style={{borderLeft: "10px solid #3d4800"}}></code>
-            </pre>
+                <div className="shadow-md bg-white" style={{
+                    marginLeft: "2px",
+                    marginRight: "2px",
+                    marginTop: "1px",
+                    marginBottom: "4px",
+                    border: "thin solid silver",
+                    padding: "10px",
+                    borderRadius: "10px"
+                }}>
+                {CodeBlock({code})}
+                </div>
 
                 <br/>
                 <p>Next.js 14 does SEO and metadata a little differently than past versions did.<br/><br/>
@@ -79,7 +80,7 @@ export default async function Page() {
 
                 <br/>
 
-                <div className="shadow-md" style={{
+                <div className="shadow-md bg-white" style={{
                     marginLeft: "2px",
                     marginRight: "2px",
                     marginTop: "1px",

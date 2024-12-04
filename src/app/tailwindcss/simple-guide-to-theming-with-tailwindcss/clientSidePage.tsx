@@ -2,47 +2,18 @@
 
 import React from "react";
 import Link from 'next/link';
-//import PrismLoader from "@/components/prism-loader";
-import Prism from "prismjs";
-import "prismjs/themes/prism-coy.css";
-import "prismjs/components/prism-typescript";
-import DOMPurify from "isomorphic-dompurify";
-import {Card} from "@mantine/core";
-import type {Metadata} from "next";
-
 import Image from "next/image";
 import Photo from "../../public/img.png";
 import {useState} from 'react';
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { tomorrow, vs } from "react-syntax-highlighter/dist/esm/styles/prism";
+
 
 const themes = ["Black", "Red", "Purple", "Green", "Blue"];
 
-const highlight = (code:string, language:string='markup') => {
-    const res = Prism.highlight(code, Prism.languages[language], language);
-    return res;
-}
-
-const highlight2 = (code2:string, language:string='markup') => {
-    const res = Prism.highlight(code2, Prism.languages[language], language);
-    return res;
-}
-
-const highlight3 = (code3:string, language:string='markup') => {
-    const res = Prism.highlight(code3, Prism.languages[language], language);
-    return res;
-}
-/*
-
-export const metadata: Metadata = {
-    title: 'Simple Guide to Theming With Tailwindcss',
-    description: 'Using CSS variables Tailwindcss can easily handle theming.',
-    keywords: ['Theming with tailwindcss','Tailwindcss theme','How to theme using Tailwindcss']
-}
-*/
-
 export default function ClientSidePage() {
 
-    const code = `
-PAGE.TSX
+    const code = `//PAGE.TSX
 'use client'
 
 import Image from "next/image";
@@ -106,11 +77,14 @@ export default function cssThemeStarter() {
             </div>
         </main>
     );
-}
-    `
+}`
+    const CodeBlock = ({ code }: { code: string }) => (
+        <SyntaxHighlighter language="typescript" style={vs} showLineNumbers={true}>
+            {code}
+        </SyntaxHighlighter>
+    );
 
-    const code2 = `
-TAILWIND.CONFIG.TS
+    const code2 = `//TAILWIND.CONFIG.TS
 import type { Config } from "tailwindcss";
 
 const config = {
@@ -151,13 +125,16 @@ const config = {
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
 
-export default config;
+export default config;`
 
 
-`
+    const CodeBlock2 = ({ code2 }: { code2: string }) => (
+        <SyntaxHighlighter language="typescript" style={vs} showLineNumbers={true}>
+            {code2}
+        </SyntaxHighlighter>
+    );
 
-    const code3 = `
-GLOBALS.CSS
+    const code3 = `//GLOBALS.CSS
     
 @tailwind base;
 @tailwind components;
@@ -208,14 +185,12 @@ AND THIS:
   --color-primary: hsl(220,100%, 50%);
   --color-secondary: hsl(220,100%, 75%);
 }
-//END
-
-`
-
-    const language = "typescript";
-    const highlightedCode = highlight(code, language);
-    const highlightedCode2 = highlight(code2, language);
-    const highlightedCode3 = highlight(code3, language);
+//END`
+    const CodeBlock3 = ({ code3 }: { code3: string }) => (
+        <SyntaxHighlighter language="typescript" style={vs} showLineNumbers={true}>
+            {code3}
+        </SyntaxHighlighter>
+    );
 
     const [theme, setTheme] = useState<string>(themes[0]);
     return (
@@ -285,37 +260,55 @@ AND THIS:
             in my file). Big Caution! If you already have a theme in place that
             uses &quot;primary&quot;, &quot;secondary&quot;, etc
             you&apos;ll overwrite that theme with this new one we&apos;re working on here. Backup your files!<br/>
-            <pre className="language-typescript" style={{wordWrap: "normal"}}>
-                <code
-                    className="language-typescript"
-                    dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(highlightedCode2)}}
-                    style={{borderLeft: "10px solid #3d4800"}}></code>
-            </pre>
+            <div className="shadow-md bg-white" style={{
+                marginLeft: "2px",
+                marginRight: "2px",
+                marginTop: "1px",
+                marginBottom: "4px",
+                border: "thin solid silver",
+                padding: "10px",
+                borderRadius: "10px"
+            }}>
+                {CodeBlock2({code2})}
+            </div>
 
             <br/>
-            <span style={{fontWeight:"bold"}}>STEP 2:</span><br/>
-            Edit your globals.css file to add in the following code below (...again, I added &quot;START&quot; AND &quot;END&quot;) Here you&apos;re basically defining the colors, and then adding those to your custom themes that you&apos;re also defining.<br />
+            <span style={{fontWeight: "bold"}}>STEP 2:</span><br/>
+            Edit your globals.css file to add in the following code below (...again, I
+            added &quot;START&quot; AND &quot;END&quot;) Here you&apos;re basically defining the colors, and then adding
+            those to your custom themes that you&apos;re also defining.<br/>
 
-            <pre className="language-typescript" style={{wordWrap: "normal"}}>
-                <code
-                    className="language-typescript"
-                    dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(highlightedCode3)}}
-                    style={{borderLeft: "10px solid #3d4800"}}></code>
-            </pre>
-
-            <br/>
-
-            <span style={{fontWeight:"bold"}}>STEP 3:</span><br /> For ease of following along I&apos;ve gone ahead and just commented the code below (all CAPS)
-            <pre className="language-typescript" style={{wordWrap: "normal"}}>
-                <code
-                    className="language-typescript"
-                    dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(highlightedCode)}}
-                    style={{borderLeft: "10px solid #3d4800"}}></code>
-            </pre>
+            <div className="shadow-md bg-white" style={{
+                marginLeft: "2px",
+                marginRight: "2px",
+                marginTop: "1px",
+                marginBottom: "4px",
+                border: "thin solid silver",
+                padding: "10px",
+                borderRadius: "10px"
+            }}>
+                {CodeBlock3({code3})}
+            </div>
 
             <br/>
 
-            <div className="shadow-md" style={{
+            <span style={{fontWeight: "bold"}}>STEP 3:</span><br/> For ease of following along I&apos;ve gone ahead and
+            just commented the code below (all CAPS)
+            <div className="shadow-md bg-white" style={{
+                marginLeft: "2px",
+                marginRight: "2px",
+                marginTop: "1px",
+                marginBottom: "4px",
+                border: "thin solid silver",
+                padding: "10px",
+                borderRadius: "10px"
+            }}>
+                {CodeBlock({code})}
+            </div>
+
+            <br/>
+
+            <div className="shadow-md bg-white" style={{
                 marginLeft: "2px",
                 marginRight: "2px",
                 marginTop: "1px",

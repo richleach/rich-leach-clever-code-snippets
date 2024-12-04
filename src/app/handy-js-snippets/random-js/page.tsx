@@ -1,9 +1,6 @@
 import React from "react";
-//import PrismLoader from "@/components/prism-loader";
-import Prism from "prismjs";
-import "prismjs/themes/prism-coy.css";
-import "prismjs/components/prism-typescript";
-import DOMPurify from "isomorphic-dompurify";
+import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
+import {vs} from "react-syntax-highlighter/dist/esm/styles/prism";
 import type {Metadata} from "next";
 
 export const metadata: Metadata = {
@@ -13,19 +10,16 @@ export const metadata: Metadata = {
 }
 
 
-const highlight = (code:string, language:string='markup') => {
-    const res = Prism.highlight(code, Prism.languages[language], language);
-    return res;
-}
 
 export default function RandomJS() {
 
-    const code = `
-const randomNumber = Math.floor(Math.random() * 10) +1;
-    `
+const code = `const randomNumber = Math.floor(Math.random() * 10) +1;`
 
-    const language = "typescript";
-    const highlightedCode = highlight(code, language);
+    const CodeBlock = ({ code }: { code: string }) => (
+        <SyntaxHighlighter language="typescript" style={vs} showLineNumbers={true}>
+            {code}
+        </SyntaxHighlighter>
+    )
 
     return (
         <div className="min-h-screen m-4">
@@ -35,13 +29,17 @@ const randomNumber = Math.floor(Math.random() * 10) +1;
             <p className="mt-3">JavaScript that generates a random number between 1 and 10. Change &quot;10&quot; to whatever range
                 you need.</p>
             <br/>
-            <pre className="language-typescript" style={{wordWrap: "normal"}}>
-                <code
-                    className="language-typescript"
-                    dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(highlightedCode)}}
-                    style={{borderLeft: "10px solid #3d4800"}}></code>
-            </pre>
-
+            <div className="shadow-md bg-white" style={{
+                marginLeft: "2px",
+                marginRight: "2px",
+                marginTop: "1px",
+                marginBottom: "4px",
+                border: "thin solid silver",
+                padding: "10px",
+                borderRadius: "10px"
+            }}>
+                {CodeBlock({code})}
+            </div>
         </div>
     )
 }
