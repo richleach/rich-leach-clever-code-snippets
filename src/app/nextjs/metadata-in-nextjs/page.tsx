@@ -1,10 +1,5 @@
 import React from "react";
-//import PrismLoader from "@/components/prism-loader";
-import Prism from "prismjs";
-import "prismjs/themes/prism-coy.css";
-import "prismjs/components/prism-typescript";
-import DOMPurify from "isomorphic-dompurify";
-import {Card} from "@mantine/core";
+
 import Link from "next/link";
 import type {Metadata} from "next";
 import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
@@ -39,8 +34,6 @@ export default async function Page() {
         </SyntaxHighlighter>
     );
 
-    let data = await fetch('https://api.vercel.app/blog')
-    let posts = await data.json()
     return (
         <>
             <h2 className="w-full text-center text-xl">
