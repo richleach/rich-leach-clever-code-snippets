@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default async function Page() {
 
-    const code = `export default function Posts() {
+    const code = `export default async function Posts() {
    let posts:any[] = [];
 
     try {
