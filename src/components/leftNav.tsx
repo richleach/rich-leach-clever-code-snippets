@@ -7,7 +7,7 @@ export default function LeftNav() {
                 <p><Link href="/pre-reqs"> Pre-Reqs</Link></p>
 
                 {/*<p style={{paddingTop: "4px"}}><Link href="/tailwindcss">Tailwind CSS</Link></p>*/}
-                <p style={{paddingTop: "4px"}}>Tailwind CSS</p>
+                <p style={{paddingTop: "7px"}}>Tailwind CSS</p>
 
                 <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
                     href="/tailwindcss/conditional-css-classes">Conditional CSS Classes</Link></li>
@@ -19,7 +19,7 @@ export default function LeftNav() {
                     Tailwindcss</Link></li>
 
                 {/*<p style={{paddingTop: "4px"}}><Link href="/jsx-snippets">Handy JSX Snippets</Link></p>*/}
-                <p style={{paddingTop: "4px"}}>Handy JSX Snippets</p>
+                <p style={{paddingTop: "7px"}}>Handy JSX Snippets</p>
 
                 <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
                     href="/handy-js-snippets/random-js/">Random Number Generator</Link></li>
@@ -27,7 +27,7 @@ export default function LeftNav() {
                 <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
                     href="/handy-js-snippets/dynamic-year-generator/">Dynamic Year Generator</Link></li>
 
-                {/*<p style={{paddingTop: "4px"}}><Link href="/nextjs">Next.js</Link></p>*/}
+                {/*<p style={{paddingTop: "7px"}}><Link href="/nextjs">Next.js</Link></p>*/}
                 <p style={{paddingTop: "4px"}}>Next.js</p>
 
                 <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
@@ -42,11 +42,11 @@ export default function LeftNav() {
                 <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
                     href="/nextjs/metadata-in-nextjs-with-client-components/">Metadata in Your Next.js Client
                     Components</Link></li>
-                {/*<li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
-                    href="/nextjs/simple-contact-form/">Simple Next.js Contact Form</Link></li>*/}
+                <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
+                    href="/nextjs/debugging-api-calls/">Debugging Your API Calls</Link></li>
 
                 {/*<p style={{paddingTop: "4px"}}><Link href="/strictly-react">Strictly React</Link></p>*/}
-                <p style={{paddingTop: "4px"}}>Strictly React</p>
+                <p style={{paddingTop: "7px"}}>Strictly React</p>
 
                 <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
                     href="/strictly-react/if-else-alternatives/">If-Else Alternatives</Link></li>
@@ -58,13 +58,13 @@ export default function LeftNav() {
                     href="/typescript/how-typescript-works-in-nextjs">BASICS: How TypeScript Works in Next.js</Link>
                 </li>
 
-                <p style={{paddingTop: "4px"}}>Mantine Component Library</p>
+                <p style={{paddingTop: "7px"}}>Mantine Component Library</p>
 
                 <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
                     href="/mantine/getting-started-with-forms">BASICS: Getting Started With Forms</Link>
                 </li>
 
-                <p style={{paddingTop: "4px"}}>Search Engines / Site Ranking</p>
+                <p style={{paddingTop: "7px"}}>Search Engines / Site Ranking</p>
 
                 <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
                     href="/seo/seo-checklist">SEO Checklist</Link>
