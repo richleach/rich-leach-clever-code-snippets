@@ -51,7 +51,7 @@ export default async function Page() {
         // Dump the response and data to the console
         //console.dir(data, {depth: null}); // Logs the entire response object
         //console.log('Data:', posts); // Logs the parsed JSON data
-        console.dir(posts, { depth: null}); //Expand all nested properties
+        //console.dir(posts, { depth: null}); //Expand all nested properties
     } catch (error) {
         console.error('Error fetching data:', error);
     }
