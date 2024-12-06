@@ -211,7 +211,7 @@ AND THIS:
             }}>
                 <div className="flex flex-col items-center">
                     <h3 className="font-semibold pb-2 text-center pb-6">Click to choose your theme:</h3>
-                    <div className="flex gap-4" style={{marginBottom:"-13px"}}>
+                    <div className="flex gap-4" style={{marginBottom: "-13px"}}>
                         {themes.map((t) => (
                             <div className="cursor-pointer p-1 pr-2 pl-2"
                                  style={{color: t, borderColor: t, border: "thin solid", borderRadius: "5px"}} key={t}
@@ -231,7 +231,8 @@ AND THIS:
                             Bulldogs-R-Us
                         </h1>
                         <p className="flex-2 text-sm pb-3 leading-7">
-                            The Mighty Bulldog who has long been confused as an icon of fear, dominance and intimidation is
+                            The Mighty Bulldog who has long been confused as an icon of fear, dominance and intimidation
+                            is
                             actually one of the most docile and loving breeds available today.
                             Amicable and affectionate, the irony is not lost on this breed that was originally bred for
                             bull baiting back in the 1600&apos;s. Today their reputation of loyalty and affection -
@@ -251,15 +252,18 @@ AND THIS:
                 </div>
             </main>
             <h2 className="text-lg w-full text-center">What&apos;s Going On With The Bulldog Theme?</h2><br/>
-            In my new Bulldog theme (above) just click the various color buttons and you&apos;ll notice the headline, buttons and image (mouseover) change to your selected color. I restricted this theme to just this dialog box; you could easily include an entire page or even your completed site. This theme demo is leveraging Next.js (React), and TailwindCSS - let&apos;s walk through the code. <br /><br />
-            <span style={{fontWeight:"bold"}}>STEP 1:</span><br/>
+            In my new Bulldog theme (above) just click the various color buttons and you&apos;ll notice the headline,
+            buttons and image (mouseover) change to your selected color. I restricted this theme to just this dialog
+            box; you could easily include an entire page or even your completed site. This theme demo is leveraging
+            Next.js (React), and TailwindCSS - let&apos;s walk through the code. <br/><br/>
+            <span style={{fontWeight: "bold"}}>STEP 1:</span><br/>
             First things first: Edit your tailwind.config.ts file under theme &gt;&gt; extend &gt;&gt; colors to
             include &quot;primary&quot;,
             &quot;secondary&quot;, &quot;bgPrimary&quot; and &quot;tBase&quot; (I commented the code below with START
             HERE and END HERE where I did it
             in my file). Big Caution! If you already have a theme in place that
             uses &quot;primary&quot;, &quot;secondary&quot;, etc
-            you&apos;ll overwrite that theme with this new one we&apos;re working on here. Backup your files!<br/>
+            you&apos;ll overwrite that theme with this new one we&apos;re working on here. Backup your files!<br/><br/>
             <div className="shadow-md bg-white" style={{
                 marginLeft: "2px",
                 marginRight: "2px",
@@ -276,7 +280,7 @@ AND THIS:
             <span style={{fontWeight: "bold"}}>STEP 2:</span><br/>
             Edit your globals.css file to add in the following code below (...again, I
             added &quot;START&quot; AND &quot;END&quot;) Here you&apos;re basically defining the colors, and then adding
-            those to your custom themes that you&apos;re also defining.<br/>
+            those to your custom themes that you&apos;re also defining.<br/><br/>
 
             <div className="shadow-md bg-white" style={{
                 marginLeft: "2px",
@@ -293,7 +297,7 @@ AND THIS:
             <br/>
 
             <span style={{fontWeight: "bold"}}>STEP 3:</span><br/> For ease of following along I&apos;ve gone ahead and
-            just commented the code below (all CAPS)
+            just commented the code below (all CAPS). <br/><br/>
             <div className="shadow-md bg-white" style={{
                 marginLeft: "2px",
                 marginRight: "2px",
@@ -317,7 +321,8 @@ AND THIS:
                 padding: "10px",
                 borderRadius: "10px"
             }}>
-                <strong>Summary</strong>: TailwindCSS will empower you to build out themes - or even just partial themes - that you can apply to your Next.js application.
+                <strong>Summary</strong>: TailwindCSS will empower you to build out themes - or even just partial themes
+                - that you can apply to your Next.js application.
             </div>
             {/*<br />
             Special thanks to <span

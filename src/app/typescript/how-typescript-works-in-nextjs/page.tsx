@@ -93,7 +93,7 @@ export default function ProductButton({actions, children, onClick}:ProductButton
             }}>
                 {CodeBlock({code})}
             </div>
-
+            <br/>
             <div className="shadow-md bg-white" style={{
                 marginLeft: "2px",
                 marginRight: "2px",
