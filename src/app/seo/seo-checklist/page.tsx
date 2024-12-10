@@ -65,7 +65,7 @@ const number = -2;
                 with &quot;experts&quot; who never even scripted a web page, let alone brought a site to first page
                 rankings on Google. The level of effort to achieve first page search engine results by organic means is
                 no small task and while there are a lot of software applications to help your SEO efforts it will still
-                take quite a bit of time to garner SEO success... by which time the search engines change up their
+                take quite a bit of time to achieve SEO success... by which time the search engines change up their
                 algorithms to keep the SEO rankings playing field &quot;level&quot;, which can send your current SEO
                 rankings way down the SERPs (search engine results pages). Of course we&apos;ll have to consider
                 wild-cards going forward, like when ChatGPT starts accepting &quot;sponsorships&quot;, or something like
@@ -73,11 +73,10 @@ const number = -2;
                 pontificate about what should become more of a broader SEO initiative, and less about a single or even
                 handful of specific tasks to make it to the SEO big-time. <br/><br/>
                 <strong>Summary</strong>: Here are some guidelines that I follow to improve a site&apos;s SEO
-                performance. In my experience those folks who are committed to a brief daily check-in on their
-                site&apos;s SEO progress usually succeed in this space; having said that it could take - not days - but
-                likely weeks or
-                even months - before you see the organic search results improvements that you&apos;re really looking
-                for. BTW this is a growing, living list so check back often for updates.<br/><br/>
+                performance. In my experience SEO success is spear-headed by those who are committed to a brief daily check-in on their
+                site&apos;s SEO progress. At the same time managing expectations is also important - it could take, not just days - but
+                likely weeks or even months - before you see the organic search results improvements that you&apos;re really looking
+                for. Over the years I&apos;ve been on teams that were lead by Google experts where our mission was to improve sites&apos; rankings, and listed below is some of what we did.<br/><br/>
 
                 <h3 className="w-full text-center text-xl border-t-2 pt-2">Do These Things First</h3>
                 In a perfect world you&apos;ll do these things before you&apos;ve even started building your site.
@@ -100,7 +99,7 @@ const number = -2;
                     <li><strong>Buy Your &quot;Keyword-Perfected&quot; Domain Name:</strong> The example I always use
                         is, if you&apos;re going to be selling naked lady golf tees from your website then do your best
                         to get the domain www.nakedladygolftees.com. If that domain is already taken then find the next
-                        closest domain. Get as close as you can and then when you buy the domain buy it for 10 years;
+                        closest domain that matches your keywords of choice. Get as close as you can and then when you buy the domain buy it for 10 years;
                         the search engines will actually do a DNS lookup and give you more points for a longer ownership
                         period than a shorter one.
                     </li>
@@ -121,14 +120,14 @@ const number = -2;
                         nonsense will hurt your SEO efforts, a lot. Search engines want to suggest relevant pages in
                         their search results; if search engines refer people to non-relevant or un/under related sites
                         that don&apos;t answer a user&apos;s questions then nobody would continue to use search
-                        engines.... Also a good idea: something known as &quot;long-tail-urls&quot;, for
+                        engines, so your mantra should be relevancy, accuracy and above all expertise. Also a good idea: something known as &quot;long-tail-urls&quot;, for
                         example &quot;healthstore.com/buy-vitamin-c-with-hesperdin-and-rose-hips-immune-boosting-strengths&quot; instead
                         of just using the url:  &quot;healthstore.com/buy-good-vitamin-c&quot;.
                     </li>
                     <li><strong>Meta Tags</strong> Title, Description and Keywords. Use &apos;em!</li>
                     <li><strong>Submit a XML Sitemap To Google at Launch/Page Additions:</strong> Learn how to, and then
-                        build a XML sitemap to put into your site&apos;s root. Then log into your account(s) in your
-                        desired search engine(s) and tell them about it. Same with a robots.txt file.
+                        build a XML sitemap to put into your site&apos;s root. Then log into your Google account and tell them about it.
+                        Same with a robots.txt file.
                     </li>
                     <li><strong>No Tricks: </strong>Avoid using any HTML or coding &quot;tricks&quot; like keyword
                         stuffing or colored text on the screen. If the search engines haven&apos;t already figured it
