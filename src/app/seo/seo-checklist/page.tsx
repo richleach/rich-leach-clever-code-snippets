@@ -120,9 +120,12 @@ const number = -2;
                         nonsense will hurt your SEO efforts, a lot. Search engines want to suggest relevant pages in
                         their search results; if search engines refer people to non-relevant or un/under related sites
                         that don&apos;t answer a user&apos;s questions then nobody would continue to use search
-                        engines, so your mantra should be relevancy, accuracy and above all expertise. Also a good idea: something known as &quot;long-tail-urls&quot;, for
-                        example &quot;healthstore.com/buy-vitamin-c-with-hesperdin-and-rose-hips-immune-boosting-strengths&quot; instead
-                        of just using the url:  &quot;healthstore.com/buy-good-vitamin-c&quot;.
+                        engines, so your mantra should be relevancy, accuracy and above all expertise. Also a good idea:
+                        something known as &quot;long-tail-urls&quot;, for
+                        example your landing pages would benefit much more from something like this:<br/><br/>
+                        <strong>healthstore.com/buy-vitamin-c-with-hesperdin-and-rose-hips-immune-boosting-strengths</strong>
+                        <br/><br/>instead
+                        of a url like this one:<br/><br/> <strong>healthstore.com/buy-vitamin-c</strong>.<br/><br/>
                     </li>
                     <li><strong>Meta Tags</strong> Title, Description and Keywords. Use &apos;em!</li>
                     <li><strong>Submit a XML Sitemap To Google at Launch/Page Additions:</strong> Learn how to, and then
