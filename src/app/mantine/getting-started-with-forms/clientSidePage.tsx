@@ -20,7 +20,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow, vs } from "react-syntax-highlighter/dist/esm/styles/prism";
-
+import styles from './ResponsiveInput.module.css';
+import './ResponsiveSegmentedControl.css';
 
 export default function GettingStartedWithForms() {
 
@@ -388,33 +389,36 @@ import Image from "next/image";
                 }}>
                     <div className="text-lg">Form Demo Using Mantine Form Components</div>
                     <span>Fill out the form below and then click the Submit Form button. Your information is completely safe with me. </span>
-                    <div className="flex">
-                        <div className="w-1/2">
+                    <div className="flex flex-col lg:flex-row">
+                        <div className="w-full lg:w-1/2">
                             {/*I display any error messages immediately beneath the troubled form control*/}
                             <Fieldset legend="Confidential Information"
                                       style={{marginTop: "20px", fontWeight: "bold", width: "90%"}}>
-                                <TextInput
-                                    label="First Name"
-                                    name="first"
-                                    description="Enter your first name (required)"
-                                    value={firstValue}
-                                    onChange={(event) => setFirstValue(event.currentTarget.value)}
-                                    required
-                                    className="w-[300px] pt-4"
-                                />
-                                {firstError && <span className="text-sm text-red-500">ERROR! {firstError}</span>}
+                                <div className={styles.wrapper}>
+                                    <TextInput
+                                        label="First Name"
+                                        name="first"
+                                        description="Enter your first name (required)"
+                                        value={firstValue}
+                                        onChange={(event) => setFirstValue(event.currentTarget.value)}
+                                        required
+                                        className="pt-4"
 
-                                <TextInput
-                                    label="Last Name"
-                                    name="last"
-                                    description="Enter your last name (required)"
-                                    value={lastValue}
-                                    onChange={(event) => setLastValue(event.currentTarget.value)}
-                                    required
-                                    className="w-[300px] pt-4"
-                                />
-                                {lastError && <span className="text-sm text-red-500">ERROR! {lastError}</span>}
-
+                                    />
+                                    {firstError && <span className="text-sm text-red-500">ERROR! {firstError}</span>}
+                                </div>
+                                <div className={styles.wrapper}>
+                                    <TextInput
+                                        label="Last Name"
+                                        name="last"
+                                        description="Enter your last name (required)"
+                                        value={lastValue}
+                                        onChange={(event) => setLastValue(event.currentTarget.value)}
+                                        required
+                                        className="pt-4"
+                                    />
+                                    {lastError && <span className="text-sm text-red-500">ERROR! {lastError}</span>}
+                                </div>
                             </Fieldset>
 
                             <Fieldset legend="Super-Duper Confidential Information"
@@ -448,7 +452,7 @@ import Image from "next/image";
                                     }}> Pick one
                                     </div>
                                     <SegmentedControl data={['React', 'Next.js', 'Angular', 'Vue', 'CSS']}
-                                                      value={favTechValue} onChange={setFavTechValue}/>
+                                                      value={favTechValue} onChange={setFavTechValue} className="responsive-control"/>
                                 </div>
 
                                 <div className="pt-5">
@@ -485,7 +489,7 @@ import Image from "next/image";
                             </Fieldset>
                         </div>
 
-                        <div className="w-1/2 pt-5">
+                        <div className="w-full lg:w-1/2 pt-5">
                             <Fieldset legend="End User License Agreement"
                                       style={{fontWeight: "bold", width: "90%"}}>
                                 <span className="text-sm font-normal">Scroll to read, then agree to this agreement by agreeing at the bottom of this agreement. But only if you agree!<br/><br/></span>

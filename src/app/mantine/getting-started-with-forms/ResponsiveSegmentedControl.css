@@ -1,0 +1,13 @@
+.responsive-control {
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .responsive-control {
+        flex-direction: column; /* Ensure container supports vertical layout */
+    }
+
+    .responsive-control .mantine-SegmentedControl-control {
+        width: 100%; /* Make each segment take full width */
+    }
+}

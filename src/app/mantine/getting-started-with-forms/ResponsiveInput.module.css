@@ -1,0 +1,9 @@
+.wrapper {
+    width: 90%; /* Default width */
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+}
