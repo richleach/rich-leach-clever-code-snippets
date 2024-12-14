@@ -25,7 +25,7 @@ export default function Header() {
                     className="w-1/4 text-xl text-right mr-4 text-violet-800">
                    <Link href="/contact">
                         <button type="button"
-                                className="text-white bg-gradient-to-r from-purple-700 via-purple-600 to-purple-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Contact Rich
+                                className="text-white  hover:border-purple-400  border-2 border-purple-700 rounded-lg px-4 py-2 bg-purple-700 font-medium  text-sm  text-center me-2 mb-2">Contact Rich
                         </button>
                    </Link>
                 </div>
