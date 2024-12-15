@@ -1,3 +1,8 @@
+type Post ={
+    id: number;
+    title: string;
+}
+
 import React, { Suspense } from 'react';
 import type {Metadata} from "next";
 import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
@@ -12,6 +17,8 @@ export const metadata: Metadata = {
 
 // A helper function to fetch the blog data
 async function fetchBlogs() {
+    //the handy-dandy Promise that resolves after 2 seconds
+    //await new Promise((resolve) => setTimeout(resolve, 2000));
     const res = await fetch('https://api.vercel.app/blog', { cache: 'no-store' }); // Adjust caching as needed
     if (!res.ok) {
         throw new Error('Failed to fetch blogs');
@@ -21,12 +28,13 @@ async function fetchBlogs() {
 
 // Server Component to display blogs
 async function BlogList() {
+
     const posts = await fetchBlogs();
 
     return (
-        <ul>
-            {posts.map((post: any) => (
-                <li key={post.id}>&middot; {post.title}</li>
+        <ul className="space-y-2 p-2">
+            {posts.map((post: Post) => (
+                <li key={post.id} className="p-2 bg-white shadow-md rounded-lg">&middot; {post.id} {post.title}</li>
             ))}
         </ul>
     );
@@ -48,9 +56,9 @@ async function BlogList() {
     const posts = await fetchBlogs();
 
     return (
-        <ul>
-            {posts.map((post: any) => (
-                <li key={post.id}>&middot; {post.title}</li>
+        <ul className="space-y-2 p-2">
+            {posts.map((post: Post) => (
+                <li key={post.id}  className="p-2 bg-white shadow-md rounded-lg">&middot; {post.title}</li>
             ))}
         </ul>
     );
