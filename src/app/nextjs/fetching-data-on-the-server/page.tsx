@@ -44,6 +44,8 @@ export default function Page() {
 
     const code = `// A helper function to fetch the blog data
 async function fetchBlogs() {
+    //the handy-dandy Promise that resolves after 2 seconds
+    //await new Promise((resolve) => setTimeout(resolve, 2000));
     const res = await fetch('https://api.vercel.app/blog', { cache: 'no-store' }); // Adjust caching as needed
     if (!res.ok) {
         throw new Error('Failed to fetch blogs');
