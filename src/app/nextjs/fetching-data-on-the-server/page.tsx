@@ -142,7 +142,7 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
                     <strong>Summary</strong>: fetchBlogs() calls the api.vercel.app/blog endpoint, checks for errors then converts
                     the response to json() for return to BlogList(). In the return output a simple .map() statement loops over the results and
                     outputs to screen. The function Page() wraps the functionality in a suspense tag in case network ops are slowed.... Don&apos;t forget to add a key attribute to each item being output in your map
-                    loop; React needs that for element id for future operations. Oh, and just in case something naughty happens I included an error.ts file that I simply added to the same directory with the other files.
+                    loop; React needs that for element id for future operations. Oh, and just in case something naughty happens I included an error.ts file that I simply added to the same directory with the other files. We don&apos;t need a loading.tsx page since we&apos;re already using <strong>&lt;Suspense /&gt;</strong> with a fallback attribute.
                 </div>
 
             </div>
