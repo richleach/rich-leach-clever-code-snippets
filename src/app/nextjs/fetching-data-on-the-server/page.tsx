@@ -80,7 +80,7 @@ export default function Page() {
 //...for good measure, here is my error.ts file to satisfy an errorBoundary
 'use client';
 
-export default function Error({ error, reset }: { error: Error; reset: () => void }) {
+export  function Error({ error, reset }: { error: Error; reset: () => void }) {
     return (
         <div>
             <h2>Something went wrong!</h2>

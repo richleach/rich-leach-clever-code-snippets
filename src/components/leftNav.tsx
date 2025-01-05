@@ -63,6 +63,9 @@ export default function LeftNav() {
                 <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
                     href="/mantine/getting-started-with-forms">BASICS: Getting Started With Forms</Link>
                 </li>
+                <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
+                    href="/mantine/processing-the-form-data">NEW(ER): Processing Form Data Using Next.js 15 & Mantine Form Controls</Link>
+                </li>
 
                 <p style={{paddingTop: "7px"}}>Search Engines / Site Ranking</p>
 
