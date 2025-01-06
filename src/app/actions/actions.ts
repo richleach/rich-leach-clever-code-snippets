@@ -1,6 +1,12 @@
 'use server'
 
-export async function submitForm(formData:FormData) {
+type SubmitFormResponse = {
+    success: boolean;
+    errors: string[];
+    message: string;
+}
+
+export async function submitForm(formData:FormData): Promise<SubmitFormResponse> {
 
     const errors:string[] = [];
 
