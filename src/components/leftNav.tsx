@@ -45,7 +45,8 @@ export default function LeftNav() {
                 <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
                     href="/nextjs/debugging-api-calls/">Debugging Your API Calls</Link></li>
                 <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
-                    href="/nextjs/url-parameters-query-strings/">Working With URL Parameters and Query Strings</Link></li>
+                    href="/nextjs/url-parameters-query-strings/">Working With URL Parameters and Query Strings</Link>
+                </li>
                 {/*<p style={{paddingTop: "4px"}}><Link href="/strictly-react">Strictly React</Link></p>*/}
                 <p style={{paddingTop: "7px"}}>Strictly React</p>
 
@@ -73,6 +74,11 @@ export default function LeftNav() {
 
                 <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
                     href="/seo/seo-checklist">SEO Checklist</Link>
+                </li>
+
+                <p style={{paddingTop: "7px"}}>Applications</p>
+                <li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
+                    href="/applications/generic-crud-starter">Generic CRUD() Starter</Link>
                 </li>
             </ul>
         </menu>
