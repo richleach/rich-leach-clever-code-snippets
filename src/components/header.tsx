@@ -25,7 +25,7 @@ export default function Header() {
                     className="w-1/4 text-xl text-right mr-4 text-violet-800">
                    <Link href="/contact">
                         <button type="button"
-                                className="text-white  hover:border-purple-400  border-2 border-purple-700 rounded-lg px-4 py-2 bg-purple-700 font-medium  text-sm  text-center me-2 mb-2">Contact Rich
+                                className="text-white   hover:border-purple-900  border-2 border-purple-600 rounded-lg px-4 py-2 bg-purple-600 font-medium  text-sm  text-center me-2 mb-2">Contact Rich
                         </button>
                    </Link>
                 </div>

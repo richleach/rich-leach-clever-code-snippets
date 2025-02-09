@@ -53,7 +53,25 @@ export default function Contact() {
     return (
         <div className="flex items-center justify-center min-h-screen">
             <div className="showcase-form card">
-                {userMessage && <h2 className="p-2">{userMessage}</h2>}
+                <h1 className="w-full text-center text-xl pt-2 pb-2">Build Smarter Applications That Perform Better –
+                    Custom Next.js, React & Supabase Development</h1>
+                With over 25 years of experience in web application development, I&apos;ve built solutions for industry
+                leaders like IBM, Microsoft, and ZenPlanner in industries such as technology, construction, fitness, real estate... among
+                others. As a full-stack developer specializing in React, TypeScript, CSS and Postgres, I bring
+                a deep understanding of performance, scalability, and streamlined development processes.<br/><br/>
+
+                Having served as an architect, developer, QA tester, and project manager, I know what works - and what
+                doesn&apos;t. From monolithic structures to microservices, from your own data center to the cloud, I’ve
+                successfully
+                deployed applications that prioritize simplicity without sacrificing innovation. <br/><br/>
+
+                If your users are on a browser, tablet or phone I&apos;ll build your applications to be found and discovered. Self hosting? No problem. Parking your application up in the cloud? I&apos;m AWS Certified and have relationships with distinguished cloud hosts like Vercel. I&apos;ll build your application to the exact specs, and you&apos;ll take away a scalable application tailored to your precise business needs.<br/><br/>
+
+                <h1 className="w-full text-center text-xl pt-2 pb-2">Let’s Build Something Great Together</h1>
+                If you’re looking for a seasoned professional who can transform pitfalls into features, I’d love to
+                connect.
+
+                {userMessage && <h2 className="w-full text-center text-xl pt-6 pb-2">{userMessage}</h2>}
                 <form onSubmit={sendEmail}>
                     <input type="hidden" name="form-name" value="contact"/>
                     <div className="form-control">

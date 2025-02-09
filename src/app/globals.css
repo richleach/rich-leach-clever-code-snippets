@@ -86,8 +86,8 @@ a:hover {
 .showcase-form {
   position: relative;
   top: -31px;
-  height: 350px;
-  width: 400px;
+  /*height: 350px;*/
+  width: 80%;
   padding: 40px;
   z-index: 100;
   justify-self: flex-end;
