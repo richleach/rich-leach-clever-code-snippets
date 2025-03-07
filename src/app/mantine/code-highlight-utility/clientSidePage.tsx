@@ -50,6 +50,10 @@ function Button() {
         language="tsx"
         copyLabel="Copy Code"
         copiedLabel="There ya go!"
+        styles={{
+            root: { position: "relative" },
+            copy: { position: "absolute", top: "8px", right: "8px" },
+        }}
       /> 
                 </div>
                 <br/>
