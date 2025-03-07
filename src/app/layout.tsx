@@ -4,8 +4,9 @@ import "./globals.css";
 import Header from "@/components/header";
 import LeftNav from "@/components/leftNav";
 import Footer from "@/components/footer";
-import '@mantine/core/styles.css';
 import '@mantine/code-highlight/styles.css';
+import '@mantine/core/styles.css';
+
 
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 

@@ -20,7 +20,7 @@ function Button() {
 
 // ...use the following code snippet:
 <CodeHighlight
-    code={'// Try it, click the Copy Code button to the right $ { mycode }'}
+    code={'// Try it, click the Copy Code icon $ { mycode }'}
     language="tsx"
     copyLabel="Copy button code"
     copiedLabel="There ya go!"
@@ -46,7 +46,7 @@ function Button() {
                     borderRadius: "10px"
                 }}>
                    <CodeHighlight
-        code={`// Try it, click the Copy Code button to the right ${code}`}
+        code={`// Try it, click the Copy Code icon ${code}`}
         language="tsx"
         copyLabel="Copy Code"
         copiedLabel="There ya go!"
