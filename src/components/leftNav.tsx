@@ -31,6 +31,9 @@ export default function LeftNav() {
     href="/mantine/processing-the-form-data">NEW(ER): Processing Form Data Using Next.js 15 & Mantine
     Form Controls</Link>
 </li>
+<li className="hover:bg-slate-300 rounded-md text-sm text-slate-600">&nbsp; &middot; <Link
+    href="/mantine/code-highlight-utility">Mantine&apos;s Code Highlighter Utility</Link>
+</li>
 
                 {/*<p style={{paddingTop: "7px"}}><Link href="/nextjs">Next.js</Link></p>*/}
                 <p style={{paddingTop: "4px"}}>Next.js</p>
