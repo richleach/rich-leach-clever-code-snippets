@@ -19,6 +19,7 @@ function Button() {
     }
 
 // ...use the following code snippet:
+// in the code attribute replace the single quotes with backticks and tighten up the $ dollar sign and curly braces
 <CodeHighlight
     code={'// Try it, click the Copy Code icon $ { mycode }'}
     language="tsx"
